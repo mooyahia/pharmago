@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="AR" dir="rtl">
+  <head>
+    <!-- Meta configuration -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Info - Pharmacy Info</title>
+
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../CSS/menus.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Logo section -->
+        <div class="logo">
+          <img src="../Images/PharmaGo.svg" alt="" />
+          <span class="PharmaGo">Pharma Go</span>
+        </div>
+
+        <!-- User info -->
+        <div class="userInfo">
+          <img src="../Images/Self Picture.jpg" alt="" />
+          <div>
+            <span class="userName">محمد يحيى</span>
+            <br />
+            <span class="userRole"><small>مطور ويب</small></span>
+          </div>
+        </div>
+
+        <!-- Navigation menu -->
+        <div class="menu-wrapper">
+          <nav class="menu">
+            <a class="active generalInfo generalInfoWrapper" id="generalInfo">
+              <i class="fa-solid fa-sliders"></i>
+              <span class="MenuItemName">معلومات عامة</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="sales">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="MenuItemName">المبيعات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="inventory">
+              <i class="fa-solid fa-box"></i>
+              <span class="MenuItemName">المخزون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="purchases">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="MenuItemName">المشتريات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="b2b">
+              <i class="fa-solid fa-building"></i>
+              <span class="MenuItemName">B2B</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="clients">
+              <i class="fa-solid fa-users"></i>
+              <span class="MenuItemName">المستخدمون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="suppliers">
+              <i class="fa-solid fa-truck"></i>
+              <span class="MenuItemName">الموردون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="accountAndFinance">
+              <i class="fa-solid fa-calculator"></i>
+              <span class="MenuItemName">الحسابات / المالية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="HR">
+              <i class="fa-solid fa-user-tie"></i>
+              <span class="MenuItemName">الموارد البشرية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="frames">
+              <i class="fa-solid fa-layer-group"></i>
+              <span class="MenuItemName">الإطارات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="technicalHelp">
+              <i class="fa-solid fa-headset"></i>
+              <span class="MenuItemName">المساعدة التقنية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Sidebar toggle -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+          <i id="toggleIcon" class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div
+        class="generalInfoSubMenus generalInfoWrapper"
+        id="generalInfoSubMenus"
+      >
+        <div class="generalInfoMenu" id="generalInfoMenu">
+          <a href="pharamcyInfo.html" class="no-submenu">معلومات الصيدلية</a>
+          <a class="user">المستخدم <i class="fa-solid fa-chevron-left"></i></a>
+          <a class="settings"
+            >الإعدادات <i class="fa-solid fa-chevron-left"></i
+          ></a>
+          <a class="database"
+            >قاعدة البيانات <i class="fa-solid fa-chevron-left"></i
+          ></a>
+          <a class="no-submenu">خروج</a>
+        </div>
+
+        <div class="userMenu">
+          <a id="lockApp">إيقاف البرنامج</a>
+          <a id="changePassword">تغيير كلمة المرور</a>
+          <a href="openScreens.html">فتح الشاشات</a>
+          <a href="favouriteScreens.html">الشاشات المفضلة</a>
+        </div>
+
+        <div class="settingsMenu">
+          <a href="pharmacySettings.html">الإعدادات العامة</a>
+          <a href="printers.html">الطابعات</a>
+          <a href="barcode.html">الباركود</a>
+          <a href="stores.html">المخازن</a>
+          <a id="theme">السمة</a>
+        </div>
+
+        <div class="databaseMenu">
+          <a id="backup">النسخ الاحتياطي</a>
+          <a href="regularMaintainance.html">صيانة عادية</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="salesSubMenus salesWrapper" id="salesSubMenus">
+        <div class="salesMenu" id="salesMenu">
+          <a href="sellingInvoice.html">فاتوره بيع</a>
+          <a href="returnSale.html">مرتجع بيع</a>
+          <span class="line"></span>
+          <a href="openingBalances.html">الأرصدة الافتتاحية</a>
+          <a href="drawerDelivery.html">تسليم الدرج</a>
+          <span class="line"></span>
+          <a href="soldWithoutBalance.html">تسوية أصناف مباعة بدون رصيد</a>
+          <a href="">تقارير المبيعات</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="inventorySubMenus inventoryWrapper" id="inventorySubMenus">
+        <div class="inventoryMenu" id="inventoryMenu">
+          <a href="addProduct.html">إضافة صنف</a>
+          <a href="products.html">إدارة الأصناف</a>
+          <a href="alternatives.html">البدائل</a>
+          <a href="stores.html">المخازن</a>
+          <a href="units.html">المجموعات</a>
+          <a href="scientificGroups.html">المجموعات العلمية</a>
+          <a href="units.html">الوحدات</a>
+          <a href="useReasons.html">دواعي الإستخدام</a>
+          <a href="genreNature.html">طبيعة الصنف</a>
+          <a href="useMethods.html">طرق الإستخدام</a>
+          <a href="settlementReasons.html">أسباب التسوية</a>
+          <a href="quantitySettlement.html">تسوية كميات</a>
+          <a href="printingBarcode.html">طباعة الباركود</a>
+          <a href="shortComingsSheet.html">كشكول النواقص</a>
+          <a href="">تقارير المخازن</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="purchasesSubMenus purchasesWrapper" id="purchasesSubMenus">
+        <div class="purchasesMenu" id="purchasesMenu">
+          <a href="purchaseInvoice.html">فاتوره شراء</a>
+          <a href="">تقارير المشتريات</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="B2BSubMenus B2BWrapper" id="B2BSubMenus">
+        <div class="B2BMenu" id="B2BMenu">
+          <a href="">الجيمات</a>
+          <a href="">المستشفيات</a>
+          <a href="">الأطباء</a>
+          <a href="">تقارير B2B</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="clientsSubMenus clientsWrapper" id="clientsSubMenus">
+        <div class="clientsMenu" id="clientsMenu">
+          <a href="addCustomer.html">إضافة عميل</a>
+          <a href="customerAccountStatement.html">كشف حساب عميل</a>
+          <a href="customers.html">إدارة العملاء</a>
+          <a href="">تقارير العملاء</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="suppliersSubMenus suppliersWrapper" id="suppliersSubMenus">
+        <div class="suppliersMenu" id="suppliersMenu">
+          <a href="addSupplier.html">إضافة مورد</a>
+          <a href="suppliers.html">إدارة الموردين</a>
+          <a href="">تقارير الموردين</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div
+        class="accountsAndFinanceSubMenus accountsAndFinanceWrapper"
+        id="accountsAndFinanceSubMenus"
+      >
+        <div class="accountsAndFinanceMenu" id="accountsAndFinanceMenu">
+          <a href="cash.html">توريد النقدية</a>
+          <a href="cash.html">صرف النقدية</a>
+          <a href="salesPoints.html">نقط البيع</a>
+          <a href="">التقارير المالية</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="HRSubMenus HRWrapper" id="HRSubMenus">
+        <div class="HRMenu" id="HRMenu">
+          <a href="addEmployee.html">إضافة موظف</a>
+          <a href="addEmployee.html">تعديل بيانات موظف</a>
+          <a href="employees.html">إدارة الموظفين</a>
+          <a href="userPermission.html">إدارة صلاحيات الموظفين</a>
+          <a href="">تقارير الموظفين</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="framesSubMenus framesWrapper" id="framesSubMenus">
+        <div class="framesMenu" id="framesMenu">
+          <a href="">الجيمات</a>
+          <a href="">المستشفيات</a>
+          <a href="">الأطباء</a>
+          <a href="">تقارير B2B</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div
+        class="technicalHelpSubMenus technicalHelpWrapper"
+        id="technicalHelpSubMenus"
+      >
+        <div class="technicalHelpMenu" id="technicalHelpMenu">
+          <a href="">الجيمات</a>
+          <a href="">المستشفيات</a>
+          <a href="">الأطباء</a>
+          <a href="">تقارير B2B</a>
+        </div>
+      </div>
+
+      <!-- Main section -->
+      <div class="main">
+        <!-- Top bar -->
+        <div class="topbar">
+          <div class="topLeft">
+            <div id="mobileSidebarToggle" class="sideBarIcon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Search input -->
+            <div class="search">
+              <input type="text" placeholder="ابحث عن أى شئ تريده هنا..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <!-- Branch and date -->
+          <div class="branchAndDate">
+            <div>الفرع : <span class="branch">المنيا</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lock screen -->
+      <div id="lockScreen" class="lock-screen">
+        <div class="lock-box">
+          <h3>تم إيقاف البرنامج مؤقتًا، قم بتسجيل الدخول لفتحه</h3>
+
+          <div class="unlockInputs">
+            <div>
+              <label for="unlockUserName">اسم المستخدم:</label>
+              <input
+                type="text"
+                id="unlockUserName"
+                placeholder=" اسم المستخدم"
+              />
+            </div>
+
+            <div>
+              <label for="unlockPass">كلمة المرور:</label>
+              <input
+                type="password"
+                id="unlockPass"
+                placeholder=" كلمة المرور"
+              />
+            </div>
+          </div>
+
+          <button onclick="unlock()" id="unlockButton">فتح البرنامج</button>
+        </div>
+      </div>
+
+      <!-- Change password -->
+      <div id="changePasswordScreen" class="changePasswordScreen">
+        <div class="changePasswordBox">
+          <i class="fa-solid fa-x" id="closeChangePasswordScreen"></i>
+
+          <h3>تغيير كلمة المرور</h3>
+
+          <div class="changePasswordInputs">
+            <div>
+              <label for="unlockOldPass">كلمة المرور القديمة:</label>
+              <input
+                type="password"
+                id="unlockOldPass"
+                placeholder=" كلمة المرور القديمة"
+              />
+            </div>
+
+            <div>
+              <label for="unlockNewPass">كلمة المرور الجديدة:</label>
+              <input
+                type="password"
+                id="unlockNewPass"
+                placeholder=" كلمة المرور الجديدة"
+              />
+            </div>
+
+            <div>
+              <label for="unlockNewPass">كلمة المرور الجديدة:</label>
+              <input
+                type="password"
+                id="unlockNewPass"
+                placeholder=" كلمة المرور الجديدة"
+              />
+            </div>
+          </div>
+
+          <button id="changePasswordButton">تغيير كلمة المرور</button>
+        </div>
+      </div>
+
+      <!-- Theme modal -->
+      <div class="theme-overlay" id="themeOverlay">
+        <div class="theme-modal" id="themeModal">
+          <div class="themeModalHeader">
+            <h2 class="themeModalTitle">إعدادات المظهر</h2>
+            <button class="theme-modal__close-btn" id="closeModalBtn">
+              &times;
+            </button>
+          </div>
+
+          <form class="theme-form" id="themeForm">
+            <div class="themeFormGroup">
+              <label for="themeSelect" class="themeFormLabel">اختر الثيم</label>
+              <select id="themeSelect" class="themeFormSelect">
+                <option value="light">فاتح</option>
+                <option value="dark">داكن</option>
+              </select>
+            </div>
+
+            <div class="themeFormGroup">
+              <label for="fontSelect" class="themeFormLabel">اختر الخط</label>
+              <select id="fontSelect" class="themeFormSelect">
+                <option value="'Cairo', sans-serif">Cairo</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Arial">Arial</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="themeModalActions">
+            <button type="button" class="btn-save" id="saveSettingsBtn">
+              حفظ
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backup modal -->
+      <div class="backupOverlay" id="backupOverlay">
+        <div class="backupModal">
+          <div class="backupTitle">اختيار مكان الحفظ</div>
+
+          <div class="path-box" id="pathBox">لم يتم اختيار مسار بعد</div>
+
+          <div class="actions">
+            <button class="choose" onclick="chooseFolder()">
+              اختيار فولدر
+            </button>
+            <button class="close" onclick="closeModal()">إغلاق</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favourite screens -->
+      <div class="favouriteScreens">
+        <div class="favouriteItem">
+          <a href="favouriteScreens.html">الطابعات</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../JS/master.js"></script>
+  </body>
+</html>
