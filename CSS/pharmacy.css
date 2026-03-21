@@ -1,0 +1,138 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background: #eef1f5;
+}
+
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #2c3e50;
+  --input-color: #e3ebf3;
+}
+/* ================= CONTENT ================= */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+/* ================= SECTION ================= */
+.section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* ================= INPUTS ================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkboxs {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 30px;
+}
+.checkboxs.fullSpace {
+  width: 100%;
+  margin-top: 200px;
+}
+.checkbox {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.secondSpace {
+  margin-right: 20px;
+}
+
+/* ================= BUTTON ================= */
+.save-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.save-btn:hover {
+  background: #c0392b;
+}
+
+.generalInfoSubMenus .generalInfoMenu {
+  padding: 0;
+  width: 143px;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .checkbox {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .checkbox {
+    width: 90%;
+    margin-top: 1px;
+  }
+}
+
+
+
+.redStar {
+  color: red;
+  font-size: 20px;
+}

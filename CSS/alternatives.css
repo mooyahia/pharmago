@@ -1,0 +1,205 @@
+/* ================= ROOT VARIABLES ================= */
+/* Global CSS variables for colors, fonts, and theme settings */
+:root {
+  --primary-color: #283342;
+  --secondary-color: #009099;
+  --text-color: #131313;
+  --arrowStroke-color: #002325;
+  --delete-color: #d91f1f;
+  --button-color: #009099;
+  --buttonStroke-color: #283342;
+  --rowBackground-color: #c8ecec;
+  --background-color: #d9d9d9;
+  --inputsBackground-color: #e3ebf3;
+  --font-family: "Inter", sans-serif;
+}
+/* ================= PAGE TITLE ================= */
+/* Main title styling */
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ================= CARD CONTAINER ================= */
+/* General container box with shadow and padding */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+/* ================= HEADER SECTION ================= */
+/* Top header with inputs and buttons */
+.header {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Header input fields */
+.header input {
+  padding: 10px;
+  border-radius: 6px;
+  width: 250px;
+}
+
+/* Header buttons */
+.header button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--button-color);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= TABS ================= */
+/* Tabs container */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Individual tab */
+.tab {
+  padding: 8px 15px;
+  background: var(--background-color);
+  color: rgba(19, 19, 19, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Active tab state */
+.tab.active {
+  background: var(--secondary-color);
+  color: white;
+}
+
+/* ================= TABLE ================= */
+/* Table styling with rounded corners */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table header cells */
+.table th {
+  background: var(--secondary-color);
+  color: white;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table data cells */
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ================= SCROLLABLE AREA ================= */
+/* Container with vertical scroll */
+.scroll {
+  max-height: 180px;
+  overflow: auto;
+}
+
+/* ================= SELECTED ROW ================= */
+/* Highlight selected row */
+.selected {
+  background: #d9f3f3;
+}
+
+/* ================= ACTION BUTTONS ================= */
+/* Container for action buttons */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+/* Base button style */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+/* Primary button */
+.btn-main {
+  background: var(--button-color);
+}
+
+/* Danger button (delete) */
+.btn-danger {
+  background: var(--delete-color);
+}
+
+/* Gray button */
+.btn-gray {
+  background: #777;
+}
+
+/* ================= MODAL (POPUP) ================= */
+/* Overlay background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.modal-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+}
+
+/* Close button inside modal */
+.close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Modal input fields */
+.modal-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Modal button */
+.modal-box button {
+  width: 100%;
+  padding: 10px;
+  background: #14a3a3;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

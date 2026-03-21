@@ -1,0 +1,182 @@
+
+.products-page{
+flex: 1;
+padding: 30px;
+}
+
+.page-title{
+
+text-align:center;
+margin-bottom:20px;
+
+}
+
+.actions-bar{
+
+display:flex;
+gap:10px;
+margin-top:15px;
+
+}
+
+.actions-bar button{
+
+padding:10px 20px;
+border:none;
+background:#4b6cb7;
+color:white;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+th{
+
+background:#4b6cb7;
+color:white;
+padding:10px;
+
+}
+
+td{
+
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+
+}
+
+tbody tr{
+
+cursor:pointer;
+transition:0.2s;
+
+}
+
+
+#productsTable tbody tr:hover{
+
+background:#eef3ff;
+
+}
+
+
+.selected-row{
+
+background:#4b6cb7 !important;
+color:white;
+
+}
+
+
+
+.filters-box{
+  background:#ffffff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom:20px;
+  border:1px solid #e5e7eb;
+}
+
+/* الصف الأول */
+.filter-top{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:15px;
+  align-items:flex-end;
+}
+
+/* select + input */
+.filter-top select,
+.filter-top input{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  background:#f9fafb;
+  font-size:14px;
+  transition:0.2s;
+  min-width:160px;
+}
+
+.filter-top select:focus,
+.filter-top input:focus{
+  outline:none;
+  border-color:#4b6cb7;
+  background:#fff;
+  box-shadow:0 0 0 2px rgba(75,108,183,0.15);
+}
+
+/* container بتاع input الديناميك */
+.filter-input{
+  display:flex;
+  gap:8px;
+}
+
+/* الصف التاني */
+.filter-bottom{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  gap:80px;
+  padding-top:10px;
+  border-top:1px solid #eee;
+}
+
+/* radio */
+.radio-group{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.radio-group label{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+/* checkbox */
+.filter-bottom .checkboxs{
+  display:flex;
+  flex-direction: row;
+  gap:15px;
+}
+
+.filter-bottom label{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+/* زرار البحث */
+.btn-search{
+  margin-top:15px;
+  padding:10px 30px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(135deg,#4b6cb7,#182848);
+  color:white;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn-search:hover{
+  transform:translateY(-2px);
+  box-shadow:0 5px 12px rgba(0,0,0,0.15);
+}

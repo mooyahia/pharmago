@@ -1,0 +1,206 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f2f4f7;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+  margin-bottom: 80px;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* ================= TABLE CONTAINER ================= */
+.maintenance-table {
+  border: 2px solid #0f8b8d;
+  min-height: 350px;
+  padding: 20px;
+}
+
+.maintenance-table__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.maintenance-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+
+.status-stopped {
+  color: red;
+  font-weight: bold;
+}
+
+/* ================= BUTTONS SECTION ================= */
+.actions-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #0f8b8d;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0c6f70;
+}
+
+.btn-danger {
+  background-color: #d62828;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #a61b1b;
+}
+
+/* ================= ADD BUTTON ================= */
+.btn-add-operation {
+  background: #0f8b8d;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-add-operation:hover {
+  background: #0c6f70;
+}
+
+/* ================= MODAL OVERLAY ================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= MODAL CONTAINER ================= */
+.maintenance-modal {
+  width: 900px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+}
+
+/* ================= MODAL HEADER ================= */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.modal-close {
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ================= FORM GRID ================= */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ================= FORM GROUP ================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-input,
+.form-select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #eef2f5;
+}
+
+/* ================= CHECKBOX GROUP ================= */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+/* ================= SAVE BUTTON ================= */
+.modal-actions {
+  margin-top: 30px;
+}
+
+.btn-save {
+  background: #0f8b8d;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.btn-save:hover {
+  background: #0c6f70;
+}
+
+.generalInfoSubMenus .generalInfoMenu {
+  padding: 0;
+  width: 143px;
+}

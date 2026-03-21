@@ -1,0 +1,191 @@
+/* ================= ROOT VARIABLES ================= */
+/* Global CSS variables for colors, fonts, and theme settings */
+:root {
+  --primary-color: #283342;
+  --secondary-color: #009099;
+  --text-color: #131313;
+  --arrowStroke-color: #002325;
+  --delete-color: #d91f1f;
+  --button-color: #009099;
+  --buttonStroke-color: #283342;
+  --rowBackground-color: #c8ecec;
+  --background-color: #d9d9d9;
+  --inputsBackground-color: #e3ebf3;
+  --font-family: "Inter", sans-serif;
+}
+
+/* ================= CONTENT ================= */
+/* Main content container */
+.content {
+  flex: 1;
+  padding: 24px;
+  margin-bottom: 80px;
+}
+
+/* Page heading */
+.content h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+
+/* ================= CUSTOMIZE LAYOUT ================= */
+/* Grid layout for customization section */
+.customize {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ================= BOX ================= */
+/* Container box for lists */
+.box {
+  background: #fff;
+  border: 2px solid #009688;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= SCROLLABLE LISTS ================= */
+/* Lists with vertical scroll */
+.allScreensList,
+.favouriteScreensList {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ================= SCROLLBAR STYLE ================= */
+/* Custom scrollbar for all screens list */
+.allScreensList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.allScreensList::-webkit-scrollbar-thumb {
+  background: #009688;
+  border-radius: 4px;
+}
+
+/* ================= BOX TITLE ================= */
+/* Title inside each box */
+.box h2 {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+}
+
+/* ================= LIST ITEMS ================= */
+/* Individual list items */
+.list div {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Active list item */
+.list div.active {
+  background: #009688;
+  color: #fff;
+}
+
+/* ================= CONTROLS ================= */
+/* Controls container between lists */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100%;
+}
+
+/* Icon button (arrow buttons) */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 2px solid #1f2937;
+  background: transparent;
+  font-size: 30px;
+  color: #009099;
+  cursor: pointer;
+}
+
+/* Hover state for icon button */
+.icon-btn:hover {
+  background: #009099;
+  color: #fff;
+}
+
+/* ================= ACTION BUTTONS ================= */
+/* General action button */
+.action-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Save button */
+.save {
+  background: var(--button-color);
+  color: #fff;
+}
+
+/* Close button */
+.close {
+  background: var(--delete-color);
+  color: #fff;
+}
+
+/* ================= FAVORITE CONTROLS ================= */
+/* Controls for favorite screens section */
+.favouriteScreensControls {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+  width: 100px;
+  margin-right: 50px;
+}
+
+/* ================= SELECTED ITEM ================= */
+/* Highlight selected item */
+.selected {
+  background-color: var(--rowBackground-color);
+  border: 1px solid var(--buttonStroke-color);
+}
+
+/* ================= RESPONSIVE ================= */
+/* Adjust layout for tablets */
+@media (max-width: 991px) {
+  .customize {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+  }
+
+  .customize > *:nth-child(n+3) {
+    grid-column: 1 / -1;
+  }
+
+  .toFavouriteArrow,
+  .toAllArrow {
+    transform: rotate(-90deg);
+  }
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .box {
+    height: 220px;
+  }
+}

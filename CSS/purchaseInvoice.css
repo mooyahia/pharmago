@@ -1,0 +1,113 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary-color: #283342;
+  --secondary-color: #009099;
+  --text-color: #131313;
+  --button-color: #009099;
+  --buttonStroke-color: #283342;
+  --rowBackground-color: #c8ecec;
+  --background-color: #d9d9d9;
+  --inputsBackground-color: #e3ebf3;
+  --font-family: "Inter", sans-serif;
+}
+
+/* ================= PAGE CONTAINER ================= */
+.purchase-page {
+  padding: 15px;
+}
+
+/* ================= TITLE ================= */
+.content {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* ================= SECTION BOX ================= */
+.section-box {
+  background: #fff;
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* ================= FORM GRID ================= */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ================= FORM GROUP ================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.form-input {
+  padding: 6px;
+  border: 1px solid var(--primary-color);
+  background: var(--inputsBackground-color);
+}
+
+/* ================= TOTAL BOX ================= */
+.total-box {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* ================= TABLE ================= */
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.items-table th,
+.items-table td {
+  border: 1px solid var(--primary-color);
+  padding: 6px;
+}
+
+.items-table th {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.items-table tr:nth-child(even) {
+  background: var(--rowBackground-color);
+}
+
+.items-table tr.selected {
+  background: #004d4d;
+  color: white;
+}
+
+/* ================= ACTION BUTTONS (BOTTOM) ================= */
+.actions-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 8px 14px;
+  background: var(--button-color);
+  border: 2px solid var(--buttonStroke-color);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-btn.delete {
+  background: var(--delete-color);
+}

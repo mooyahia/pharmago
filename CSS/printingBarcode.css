@@ -1,0 +1,107 @@
+    .barcode-page {
+      padding: 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .table-container {
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #999;
+    }
+
+    .barcode-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .barcode-table th,
+    .barcode-table td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .barcode-table thead {
+      background-color: #0a3d91;
+      color: white;
+    }
+
+    /* ================= SELECTED ROW ================= */
+    .selected-row {
+      background-color: #cce0ff;
+    }
+
+    .action-buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .btn-primary {
+      background-color: #0a3d91;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background-color: #ccc;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .modal-content {
+      background: #f5f5f5;
+      padding: 20px;
+      width: 600px;
+      border: 2px solid #999;
+    }
+
+    .form-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 6px;
+    }
+
+    .form-actions {
+      grid-column: span 2;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }

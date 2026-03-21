@@ -1,0 +1,75 @@
+    /* ===== Layout ===== */
+    .content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* ===== Preview ===== */
+    .preview-box {
+      height: 420px;
+      background: #f4f6f8;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ===== Side Panel ===== */
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ===== Inputs ===== */
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-generate {
+      background: #e0e6ea;
+    }
+
+    .btn-print {
+      background: #0f8b8d;
+      color: #fff;
+      width: 100%;
+      margin-top: 20px;
+    }
