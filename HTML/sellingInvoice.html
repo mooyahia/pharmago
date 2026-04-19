@@ -332,145 +332,263 @@
              
           </div>
         </div>
-        <div class="content">
-          
-<h1 class="title">فاتورة بيع</h1>
-
-<!-- الفلاتر -->
-<div class="filters">
-<select>
-<option>المخزن</option>
-<option>مخزن 1</option>
-<option>مخزن 2</option>
-</select>
-
-<select>
-<option>العميل</option>
-</select>
-
-
-<select>
-<option>نوع الفاتورة</option>
-<option>كاش</option>
-<option>أجل</option>
-<option>B2B</option>
-</select>
-
-</div>
-
-<!-- البيانات العليا -->
-<div class="box">
-
-<table class="table">
-<thead>
-<tr>
-<th>عدد الأصناف</th>
-<th>الإجمالي</th>
-<th>بعد الخصم</th>
-<th>% الخصم</th>
-<th>قيمة الخصم</th>
-<th>مصاريف إضافية</th>
-<th>ملاحظات</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-<td>0</td>
-<td>0</td>
-<td>-</td>
-</tr>
-</tbody>
-
-</table>
-
-</div>
-
-<!-- جدول المنتجات -->
-<div class="box">
-
-<div class="scroll">
-
-<table class="table">
-
-<thead>
-<tr>
-<th>كود الصنف</th>
-<th>إسم الصنف</th>
-<th>الوحدة</th>
-<th>تاريخ الصلاحية</th>
-<th>الكمية</th>
-<th>سعر البيع</th>
-<th>الكمية المتاحة</th>
-<th>حد الطلب</th>
-<th>قيمة قبل الخصم</th>
-<th>قيمة بعد الخصم</th>
-<th>خصم</th>
-</tr>
-</thead>
-
-<tbody id="itemsTable">
-
-<tr>
-<td>101</td>
-<td>منتج 1</td>
-<td>قطعة</td>
-<td>2026-12-1</td>
-<td>5</td>
-<td>100</td>
-<td>20</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-<div class="footer">
-عدد الأصناف : <span id="count">1</span>
-</div>
-
-</div>
-
-<!-- الأزرار -->
-<div class="actions">
-
-<button class="btn btn-main">جديد</button>
-<button class="btn btn-main">حفظ</button>
-<button class="btn btn-main">طباعة</button>
-<button class="btn btn-main">خيارات</button>
-<button class="btn btn-main" onclick="addRow()">إضافة</button>
-<button class="btn btn-danger" onclick="deleteRow()">حذف</button>
-
-</div>
-<!-- البوب اب لإضافة منتج -->
-<div id="addModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>إضافة منتج</h2>
-    
-    <input type="text" id="code" placeholder="الكود">
-    <input type="text" id="name" placeholder="الاسم">
-    <input type="text" id="unit" placeholder="الوحدة">
-    <input type="date" id="expiry" placeholder="تاريخ الصلاحية">
-    <input type="number" id="quantity" placeholder="الكمية">
-    <input type="number" id="price" placeholder="السعر">
-    <input type="number" id="balance" placeholder="الرصيد">
-    <input type="number" id="limit" placeholder="الحد">
-    
-    <button class="btn btn-main" onclick="submitRow()">إضافة</button>
-  </div>
-</div>
+      <!-- CONTENT -->
+      <div class="content">
+        <!-- General Info Card -->
+        <div class="card">
+          <div class="card-body first">
+            <div class="form-row">
+              <div class="form-group">
+                <label>المخزن</label>
+                <select class="form-control">
+                  <option>مخزن 1</option>
+                  <option>مخزن 2</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>عميل</label>
+                <select class="form-control">
+                  <option>نقدى</option>
+                  <option>آجل</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>نوع الفاتورة</label>
+                <select class="form-control">
+                  <option>كاش</option>
+                  <option>بطاقة</option>
+                  <option>تحويل بنكي</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Product Search Card -->
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h3>البحث عن منتج</h3>
+          </div>
+          <div class="card-body" style="padding-bottom: 0">
+            <div class="search-row" style="margin-bottom: 14px">
+              <div class="form-group">
+                <label>كود الصنف</label>
+                <div class="search-input-wrap">
+                  <input
+                    type="text"
+                    id="searchByCode"
+                    class="form-control"
+                    placeholder="ابحث عن كود الصنف..."
+                  />
+                  <svg
+                    class="search-icon"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                  <i class="fa-solid fa-camera" id="cameraBtn"></i>
+                  <div id="cameraOverlay"></div>
+
+<div id="readerWrapper" class="reader-wrapper">
+  <div id="reader" class="reader"></div>
+
+  <button id="closeCamera" class="close-camera">×</button>
+
+  <div class="scan-label">وجّه الكاميرا على الباركود</div>
+</div>
+                </div>
+                <div>
+                </div>
+                 
+              </div>
+              <div class="form-group">
+                <label>اسم المنتج</label>
+                <div class="search-input-wrap">
+                  <input
+                    type="text"
+                    id="searchByName"
+                    class="form-control"
+                    placeholder="ابحث بأول حرفين من الاسم..."
+                  />
+                  <svg
+                    class="search-icon"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-wrap products">
+              <table>
+                <thead>
+                  <tr>
+                    <th>الكود</th>
+                    <th>اسم المنتج</th>
+                    <th>النوع</th>
+                    <th>الوحدة</th>
+                    <th>السعر</th>
+                    <th>الكمية المتاحة</th>
+                    <th>إضافة</th>
+                  </tr>
+                </thead>
+                <tbody id="searchResults">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoice Card -->
+        <div class="card" id="invoiceCard">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h3>فاتورة المنتجات</h3>
+          </div>
+          <div class="table-wrap">
+            <table class="invoice-table">
+              <thead>
+                <tr>
+                  <th>كود الصنف</th>
+                  <th>اسم الصنف</th>
+                  <th>نوع الصنف</th>
+                  <th>الكمية المتاحة</th>
+                  <th>حد الطلب</th>
+                  <th>الكمية</th>
+                  <th>الوحدة</th>
+                  <th>سعر البيع</th>
+                  <th>خصم</th>
+                  <th>قيمة قبل الخصم</th>
+                  <th>قيمة بعد الخصم</th>
+                  <th>حذف</th>
+                </tr>
+              </thead>
+              <tbody id="invoiceBody">
+                <tr id="row_1">
+                  <td><span class="badge badge-primary">MED008</span></td>
+                  <td
+                  >
+                    باراسيتامول شراب أطفال
+                  </td>
+                  <td><span class="badge badge-orange">مسكنات</span></td>
+                  <td>120</td>
+                  <td>6</td>
+                  <td>
+                    <input
+                      type="number"
+                      class="qty-input"
+                      value="1"
+                      min="1"
+                      onchange="recalc('row_1', this)"
+                    />
+                  </td>
+                  <td>
+                    <select class="unit-select">
+                      <option>شريط</option>
+                      <option>زجاجة</option>
+                      <option>علبة</option>
+                    </select>
+                  </td>
+                  <td>10</td>
+                  <td>
+                    <input
+                      type="number"
+                      class="discount-input"
+                      value="1"
+                      min="0"
+                      onchange="recalc('row_1', this)"
+                    />
+                  </td>
+                  <td class="price-before" id="before_row_1">60</td>
+                  <td class="price-after" id="after_row_1">54</td>
+                  <td>
+                    <button class="delete-btn" onclick="deleteRow('row_1')">
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6" />
+                        <path d="M10 11v6M14 11v6" />
+                        <path d="M9 6V4h6v2" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Summary -->
+          <div class="summary-row">
+            <div class="summary-item">
+              <span class="label">عدد الأصناف</span>
+              <span class="value" id="countItems">1</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">نسبة الخصم</span>
+              <span class="value">0</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">قيمة الخصم</span>
+              <span class="value" id="totalDiscount">6</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">بعد الخصم</span>
+              <span class="value" id="totalAfter">54</span>
+            </div>
+            <div class="extra-fees">
+              <label>مصاريف إضافية</label>
+              <input type="number" id="extraFees" value="0" min="0" />
+              <span class="currency">جم</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">الإجمالي</span>
+              <span class="value highlight" id="grandTotal">54</span>
+            </div>
+          </div>
+        </div>
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+          <button class="btn btn-new" id="addNewItem">
+            إضافة صنف جديد
+          </button>
+          <button class="btn btn-new" id="editItem">
+            تعديل كارت صنف
+          </button>
+          <button class="btn btn-new" id="createNewInvoice">
+            إنشاء
+          </button>
+          <button class="btn btn-delete" id="deleteInvoice">
+            حذف
+          </button>
+          <button class="btn btn-print" id="printInvoice">
+            طباعة
+          </button>
+          <button class="btn btn-save" id="saveInvoice">
+            حفظ
+          </button>
+        </div>
+      </div>
+ 
       </div>
 
 
@@ -585,7 +703,7 @@
 </div>
 
 
-
+<script src="https://unpkg.com/html5-qrcode"></script>
     <script src="../JS/master.js"></script>
     <script src="../JS/sellingInvoice.js"></script>
   </body>
