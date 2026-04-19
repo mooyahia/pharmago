@@ -1,46 +1,73 @@
-const API_BASE = "https://your-api-url.com"; // غيره
+/* ================= تعريف العناصر ================= */
 
-let selectedProduct = null;
-let invoiceItems = [];
-
-/* ================= SEARCH ================= */
+const API_BASE = "https://your-api-url.com";
 
 const searchByCode = document.getElementById("searchByCode");
 const searchByName = document.getElementById("searchByName");
 
+const searchTable = document.getElementById("searchTable");
+const searchResults = document.getElementById("searchResults");
+
+const invoiceBody = document.getElementById("invoiceBody");
+
+const totalDiscountEl = document.getElementById("totalDiscount");
+const totalAfterEl = document.getElementById("totalAfter");
+const grandTotalEl = document.getElementById("grandTotal");
+
+const extraFeesInput = document.getElementById("extraFees");
+
+const cameraBtn = document.getElementById("cameraBtn");
+const overlay = document.getElementById("cameraOverlay");
+const reader = document.getElementById("reader");
+const closeBtn = document.getElementById("closeCamera");
+
+/* ================= بيانات الفاتورة ================= */
+
+let selectedProduct = null;
+let invoiceItems = [];
+let html5QrCode = null;
+
+/* ================= SEARCH EVENTS ================= */
+
 searchByCode.addEventListener("input", handleSearch);
 searchByName.addEventListener("input", handleSearch);
+
+/* ================= SEARCH FUNCTION ================= */
 
 async function handleSearch() {
   const code = searchByCode.value.trim();
   const name = searchByName.value.trim();
 
   if (code.length < 1 && name.length < 2) {
-    document.getElementById("searchTable").style.display = "none";
+    searchTable.style.display = "none";
     return;
   }
 
-  const res = await fetch(`${API_BASE}/products?code=${code}&name=${name}`);
-  const data = await res.json();
+  try {
+    const res = await fetch(`${API_BASE}/products?code=${code}&name=${name}`);
+    const data = await res.json();
 
-  renderSearchResults(data);
+    renderSearchResults(data);
+
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 /* ================= RENDER SEARCH ================= */
 
 function renderSearchResults(products) {
-  const tbody = document.getElementById("searchResults");
-  tbody.innerHTML = "";
+  searchResults.innerHTML = "";
 
   if (!products.length) {
-    document.getElementById("searchTable").style.display = "none";
+    searchTable.style.display = "none";
     return;
   }
 
-  document.getElementById("searchTable").style.display = "block";
+  searchTable.style.display = "block";
 
   products.forEach(p => {
-    const row = `
+    searchResults.innerHTML += `
       <tr>
         <td><span class="badge badge-primary">${p.code}</span></td>
         <td>${p.name}</td>
@@ -55,7 +82,6 @@ function renderSearchResults(products) {
         </td>
       </tr>
     `;
-    tbody.innerHTML += row;
   });
 }
 
@@ -87,17 +113,16 @@ function addToInvoice(product) {
 /* ================= RENDER INVOICE ================= */
 
 function renderInvoice() {
-  const tbody = document.getElementById("invoiceBody");
-  tbody.innerHTML = "";
+  invoiceBody.innerHTML = "";
 
   invoiceItems.forEach((item, index) => {
-    const price = getPriceByUnit(item);
 
+    const price = getPriceByUnit(item);
     const before = item.qty * price;
     const discountValue = before * (item.discount / 100);
     const after = before - discountValue;
 
-    const row = `
+    invoiceBody.innerHTML += `
       <tr>
         <td>${item.code}</td>
         <td>${item.name}</td>
@@ -132,8 +157,6 @@ function renderInvoice() {
         </td>
       </tr>
     `;
-
-    tbody.innerHTML += row;
   });
 
   calcTotals();
@@ -142,14 +165,14 @@ function renderInvoice() {
 /* ================= PRICE LOGIC ================= */
 
 function getPriceByUnit(item) {
-  if (item.unitType === "box") return item.boxPrice;
-  return item.unitPrice;
+  return item.unitType === "box" ? item.boxPrice : item.unitPrice;
 }
 
-/* ================= UPDATE ================= */
+/* ================= UPDATE FUNCTIONS ================= */
 
 function updateQty(index, value) {
   const item = invoiceItems[index];
+  value = parseInt(value);
 
   if (value > item.availableQty) {
     alert("الكمية أكبر من المتاح");
@@ -161,7 +184,7 @@ function updateQty(index, value) {
     return;
   }
 
-  item.qty = parseInt(value);
+  item.qty = value;
   renderInvoice();
 }
 
@@ -185,128 +208,69 @@ function deleteItem(index) {
 /* ================= TOTALS ================= */
 
 function calcTotals() {
-  let totalBefore = 0;
-  let totalDiscount = 0;
   let totalAfter = 0;
+  let totalDiscount = 0;
 
   invoiceItems.forEach(item => {
     const price = getPriceByUnit(item);
     const before = item.qty * price;
     const discount = before * (item.discount / 100);
 
-    totalBefore += before;
     totalDiscount += discount;
-    totalAfter += (before - discount);
+    totalAfter += before - discount;
   });
 
-  const extra = parseFloat(document.getElementById("extraFees").value) || 0;
-  const grand = totalAfter + extra;
+  const extra = parseFloat(extraFeesInput.value) || 0;
 
-  document.getElementById("countItems").innerText = invoiceItems.length;
-  document.getElementById("totalDiscount").innerText = totalDiscount.toFixed(2);
-  document.getElementById("totalAfter").innerText = totalAfter.toFixed(2);
-  document.getElementById("grandTotal").innerText = grand.toFixed(2);
+  totalDiscountEl.innerText = totalDiscount.toFixed(2);
+  totalAfterEl.innerText = totalAfter.toFixed(2);
+  grandTotalEl.innerText = (totalAfter + extra).toFixed(2);
 }
 
-/* ================= BUTTONS ================= */
+/* ================= CAMERA ================= */
 
-document.getElementById("addNewItem").onclick = () => {
-  window.location.href = "addProduct.html";
-};
-
-document.getElementById("editItem").onclick = async () => {
-  if (!selectedProduct) {
-    alert("اختار صنف الأول");
-    return;
-  }
-
-  const res = await fetch(`${API_BASE}/products/${selectedProduct.id}`);
-  const data = await res.json();
-
-  localStorage.setItem("editProduct", JSON.stringify(data));
-  window.location.href = "addProduct.html?edit=true";
-};
-
-document.getElementById("createNewInvoice").onclick = () => {
-  window.open("sellingInvoice.html", "_blank");
-};
-
-document.getElementById("deleteInvoice").onclick = () => {
-  if (!confirm("متأكد؟")) return;
-
-  invoiceItems = [];
-  renderInvoice();
-};
-
-document.getElementById("saveInvoice").onclick = async () => {
-  await fetch(`${API_BASE}/invoices`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(invoiceItems)
-  });
-
-  alert("تم الحفظ");
-};
-
-document.getElementById("printInvoice").onclick = async () => {
-  const res = await fetch(`${API_BASE}/invoices/print`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(invoiceItems)
-  });
-
-  const html = await res.text();
-
-  const win = window.open("");
-  win.document.write(html);
-  win.print();
-};
-
-/* ================= CAMERA SCANNER ================= */
-
-const cameraBtn = document.getElementById("cameraBtn");
-const readerDiv = document.getElementById("reader");
-const overlay = document.getElementById("cameraOverlay");
-
-let html5QrCode;
-
-cameraBtn.addEventListener("click", () => {
-  document.getElementById("readerWrapper").style.display = "block";
-document.getElementById("cameraOverlay").style.display = "block";
+cameraBtn.addEventListener("click", async () => {
+  overlay.style.display = "flex";
 
   html5QrCode = new Html5Qrcode("reader");
 
-  html5QrCode.start(
-    { facingMode: "environment" },
-    { fps: 10, qrbox: 250 },
-    async (decodedText) => {
+  try {
+    await html5QrCode.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: 250 },
+      async (decodedText) => {
 
-      await html5QrCode.stop();
-      readerDiv.style.display = "none";
-      overlay.style.display = "none";
+        await html5QrCode.stop();
 
-      try {
-        const res = await fetch(`${API_BASE}/products/barcode/${decodedText}`);
-        const product = await res.json();
+        overlay.style.display = "none";
 
-        addToInvoice(product);
+        try {
+          const res = await fetch(`${API_BASE}/products/barcode/${decodedText}`);
+          const product = await res.json();
 
-      } catch (e) {
-        alert("المنتج غير موجود");
+          addToInvoice(product);
+
+        } catch {
+          alert("المنتج غير موجود");
+        }
       }
-    },
-    (error) => {
-      console.log(error);
-    }
-  );
+    );
+
+  } catch (err) {
+    console.error(err);
+    alert("فشل تشغيل الكاميرا");
+  }
 });
 
 /* ================= CLOSE CAMERA ================= */
 
-document.getElementById("closeCamera").onclick = async () => {
-  if (html5QrCode) {
-    await html5QrCode.stop();
-  }
-  document.getElementById("readerWrapper").style.display = "none";
-document.getElementById("cameraOverlay").style.display = "none";
+closeBtn.onclick = async () => {
+  try {
+    if (html5QrCode) {
+      await html5QrCode.stop();
+      await html5QrCode.clear();
+    }
+  } catch {}
+
+  overlay.style.display = "none";
 };
