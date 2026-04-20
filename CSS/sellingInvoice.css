@@ -149,15 +149,14 @@ select.form-control {
 }
 
 /* ================= OVERLAY FULL SCREEN ================= */
-
 .cameraOverlay {
   display: none;
-  position: fixed;   /* مهم مش relative */
+  position: fixed;   
   inset: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 9999;
+  z-index: 999900;
 
   align-items: center;
   justify-content: center;
@@ -167,11 +166,10 @@ select.form-control {
 
 .reader {
   position: relative;
-  width: 320px;
-  height: 360px;
+  width: 100px;
+  height: 100px;
   background: #111;
   border-radius: 14px;
-  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 
   animation: pop 0.2s ease-in-out;
