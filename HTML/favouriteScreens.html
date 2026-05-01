@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="AR" dir="rtl">
+  <head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Info - Pharmacy Info</title>
+
+    <!-- ================= FONT AWESOME ================= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- ================= STYLESHEETS ================= -->
+    <link rel="stylesheet" href="../CSS/favouriteScreen.css" />
+    <link rel="stylesheet" href="../CSS/menus.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ================= SIDEBAR ================= -->
+      <div class="sidebar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../Images/PharmaGo.svg" alt="" />
+          <span class="PharmaGo">Pharma Go</span>
+        </div>
+
+        <!-- User Info -->
+        <div class="userInfo">
+          <img src="../Images/Self Picture.jpg" alt="" />
+          <div>
+            <span class="userName">محمد يحيى</span>
+            <br />
+            <span class="userRole"><small>مطور ويب</small></span>
+          </div>
+        </div>
+        <!-- Navigation menu -->
+        <div class="menu-wrapper">
+          <nav class="menu" id="tabMenus">
+            <a class="active generalInfo generalInfoWrapper" id="generalInfo">
+              <i class="fa-solid fa-sliders"></i>
+              <span class="MenuItemName">معلومات عامة</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="sales">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="MenuItemName">المبيعات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="inventory">
+              <i class="fa-solid fa-box"></i>
+              <span class="MenuItemName">المخزون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="purchases">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="MenuItemName">المشتريات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+
+            <span class="line"></span>
+
+            <a id="clients">
+              <i class="fa-solid fa-users"></i>
+              <span class="MenuItemName">المستخدمون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="suppliers">
+              <i class="fa-solid fa-truck"></i>
+              <span class="MenuItemName">الموردون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="accountAndFinance">
+              <i class="fa-solid fa-calculator"></i>
+              <span class="MenuItemName">الحسابات / المالية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="HR">
+              <i class="fa-solid fa-user-tie"></i>
+              <span class="MenuItemName">الموارد البشرية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="technicalHelp">
+              <i class="fa-solid fa-headset"></i>
+              <span class="MenuItemName">المساعدة التقنية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Sidebar toggle -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+          <i id="toggleIcon" class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+
+      <div class="tabSubMenus">
+              <!-- Sub menus -->
+      <div
+        class="generalInfoSubMenus generalInfoWrapper"
+        id="generalInfoSubMenus"
+      >
+        <div class="generalInfoMenu" id="generalInfoMenu">
+          <a href="pharamcyInfo.html" class="no-submenu">معلومات الصيدلية</a>
+          <a class="user">المستخدم <i class="fa-solid fa-chevron-left"></i></a>
+          <a class="settings"
+            >الإعدادات <i class="fa-solid fa-chevron-left"></i
+          ></a>
+          <a class="database"
+            >قاعدة البيانات <i class="fa-solid fa-chevron-left"></i
+          ></a>
+          <a class="no-submenu">خروج</a>
+        </div>
+
+        <div class="userMenu">
+          <a id="lockApp">إيقاف البرنامج</a>
+          <a id="changePassword">تغيير كلمة المرور</a>
+             
+          <a href="favouriteScreens.html">الشاشات المفضلة</a>
+        </div>
+
+        <div class="settingsMenu">
+           
+          <a href="printers.html">الطابعات</a>
+            
+          <a id="theme">السمة</a>
+        </div>
+
+        <div class="databaseMenu">
+          <a id="backup">النسخ الاحتياطي</a>
+          <a href="regularMaintainance.html">صيانة عادية</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="salesSubMenus salesWrapper" id="salesSubMenus">
+        <div class="salesMenu" id="salesMenu">
+          <a href="sellingInvoice.html">فاتوره بيع</a>
+          <a href="returnSale.html">مرتجع بيع</a>
+          <span class="line"></span>
+          <a href="openingBalances.html">الأرصدة الافتتاحية</a>
+          <a href="drawerDelivery.html">تسليم الدرج</a>
+          <span class="line"></span>
+          <a href="salesReports.html">تقارير المبيعات</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="inventorySubMenus inventoryWrapper" id="inventorySubMenus">
+        <div class="inventoryMenu" id="inventoryMenu">
+          <a href="addProduct.html">إضافة صنف</a>
+          <a href="products.html">إدارة الأصناف</a>
+          <a href="alternatives.html">البدائل</a>
+          <a href="barcode.html">طباعة الباركود</a>
+          <a href="shortComingsSheet.html">كشكول النواقص</a>
+          <a href="inventory.html">المخزون</a>
+          <a href="inventoryReports.html">تقارير المخازن</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="purchasesSubMenus purchasesWrapper" id="purchasesSubMenus">
+        <div class="purchasesMenu" id="purchasesMenu">
+          <a href="purchaseInvoice.html">فاتوره شراء</a>
+          <a href="purchaseReports.html">تقارير المشتريات</a>
+        </div>
+      </div>
+
+
+      <!-- Sub menus -->
+      <div class="clientsSubMenus clientsWrapper" id="clientsSubMenus">
+        <div class="clientsMenu" id="clientsMenu">
+          <a href="addCustomer.html">إضافة عميل</a>
+          <a href="customerAccountStatement.html">كشف حساب عميل</a>
+          <a href="customers.html">إدارة العملاء</a>
+          <a href="clientsReports.html">تقارير العملاء</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="suppliersSubMenus suppliersWrapper" id="suppliersSubMenus">
+        <div class="suppliersMenu" id="suppliersMenu">
+          <a href="addSupplier.html">إضافة مورد</a>
+          <a href="suppliers.html">إدارة الموردين</a>
+          <a href="suppliersReports.html">تقارير الموردين</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div
+        class="accountsAndFinanceSubMenus accountsAndFinanceWrapper"
+        id="accountsAndFinanceSubMenus"
+      >
+        <div class="accountsAndFinanceMenu" id="accountsAndFinanceMenu">
+              
+               
+                
+          <a href="financialReports.html">التقارير المالية</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="HRSubMenus HRWrapper" id="HRSubMenus">
+        <div class="HRMenu" id="HRMenu">
+          <a href="addEmployee.html">إضافة موظف</a>
+                 
+          <a href="employees.html">إدارة الموظفين</a>
+          <a href="userPermission.html">إدارة صلاحيات الموظفين</a>
+          <a href="employeeReports.html">تقارير الموظفين</a>
+        </div>
+      </div>
+
+
+      <!-- Sub menus -->
+      <div
+        class="technicalHelpSubMenus technicalHelpWrapper"
+        id="technicalHelpSubMenus"
+      >
+        <div class="technicalHelpMenu" id="technicalHelpMenu">
+          <a href="phoneCall.html">مكالمة هاتفية</a>
+          <a href="chat.html">محادثة فورية</a>
+        </div>
+      </div>
+      </div>
+
+      
+      <!-- ================= MAIN CONTENT ================= -->
+      <div class="main">
+        <!-- Top Bar -->
+        <div class="topbar">
+          <div class="topLeft">
+            <!-- Mobile Sidebar Toggle -->
+            <div id="mobileSidebarToggle" class="sideBarIcon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Search Input -->
+            <div class="search">
+              <input type="text" placeholder="ابحث عن أى شئ تريده هنا..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <!-- Branch and Date -->
+          <div class="branchAndDate">
+            <div>الفرع : <span class="branch">المنيا</span></div>
+          </div>
+        </div>
+
+        <!-- ================= FAVORITE SCREENS CONTENT ================= -->
+        <div class="content">
+          <h1>تخصيص الشاشات المفضلة</h1>
+
+          <div class="customize">
+            <!-- Favourite Screens Section -->
+            <div class="favouriteScreensControls">
+              <button class="icon-btn">
+                <i class="fa-solid fa-arrow-up"></i>
+              </button>
+              <button class="icon-btn">
+                <i class="fa-solid fa-arrow-down"></i>
+              </button>
+            </div>
+
+            <div>
+              <h2 style="text-align: center; margin-bottom: 8px">
+                الشاشات المفضلة
+              </h2>
+
+              <div class="box">
+                <div class="favouriteScreensList list">
+                  <div>Show Favourite Screens1</div>
+                  <div>Show Favourite Screens2</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                  <div>Show Favourite Screens3</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+              <button class="icon-btn">
+                <i class="fa-solid fa-arrow-right toFavouriteArrow"></i>
+              </button>
+
+              <button class="icon-btn">
+                <i class="fa-solid fa-arrow-left toAllArrow"></i>
+              </button>
+
+              <button class="action-btn save">حفظ</button>
+            </div>
+
+            <!-- All Screens Section -->
+            <div>
+              <h2 style="text-align: center; margin-bottom: 8px">كل الشاشات</h2>
+
+              <div class="box">
+                <div class="allScreensList list">
+                  <div>General Info</div>
+                  <div>Sales</div>
+                  <div>Inventory</div>
+                  <div>Purchases</div>
+                  <div>B2B</div>
+                  <div>Clients</div>
+                  <div class="active">Show Favourite Screens</div>
+                  <div>Show Favourite Screens</div>
+                  <div>branch one</div>
+                  <div>branch one</div>
+                  <div>branch one</div>
+                  <div>branch one</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= LOCK SCREEN ================= -->
+      <div id="lockScreen" class="lock-screen">
+        <div class="lock-box">
+          <h3>تم إيقاف البرنامج مؤقتًا، قم بتسجيل الدخول لفتحه</h3>
+
+          <div class="unlockInputs">
+            <div>
+              <label for="unlockUserName">اسم المستخدم:</label>
+              <input
+                type="text"
+                id="unlockUserName"
+                placeholder=" اسم المستخدم"
+              />
+            </div>
+
+            <div>
+              <label for="unlockPass">كلمة المرور:</label>
+              <input
+                type="password"
+                id="unlockPass"
+                placeholder=" كلمة المرور"
+              />
+            </div>
+          </div>
+
+          <button onclick="unlock()" id="unlockButton">فتح البرنامج</button>
+        </div>
+      </div>
+
+      <!-- ================= CHANGE PASSWORD ================= -->
+      <div id="changePasswordScreen" class="changePasswordScreen">
+        <div class="changePasswordBox">
+          <i class="fa-solid fa-x" id="closeChangePasswordScreen"></i>
+          <h3>تغيير كلمة المرور</h3>
+
+          <div class="changePasswordInputs">
+            <div>
+              <label for="unlockOldPass">كلمة المرور القديمة:</label>
+              <input
+                type="password"
+                id="unlockOldPass"
+                placeholder=" كلمة المرور القديمة"
+              />
+            </div>
+
+            <div>
+              <label for="unlockNewPass">كلمة المرور الجديدة:</label>
+              <input
+                type="password"
+                id="unlockNewPass"
+                placeholder=" كلمة المرور الجديدة"
+              />
+            </div>
+
+            <div>
+              <label for="unlockNewPass">كلمة المرور الجديدة:</label>
+              <input
+                type="password"
+                id="unlockNewPass"
+                placeholder=" كلمة المرور الجديدة"
+              />
+            </div>
+          </div>
+
+          <button id="changePasswordButton">تغيير كلمة المرور</button>
+        </div>
+      </div>
+
+      <!-- ================= THEME SETTINGS ================= -->
+      <div class="theme-overlay" id="themeOverlay">
+        <div class="theme-modal" id="themeModal">
+          <!-- Header -->
+          <div class="themeModalHeader">
+            <h2 class="themeModalTitle">إعدادات المظهر</h2>
+            <button class="theme-modal__close-btn" id="closeModalBtn">
+              &times;
+            </button>
+          </div>
+
+          <!-- Form -->
+          <form class="theme-form" id="themeForm">
+            <div class="themeFormGroup">
+              <label for="themeSelect" class="themeFormLabel">اختر الثيم</label>
+              <select id="themeSelect" class="themeFormSelect">
+                <option value="light">فاتح</option>
+                <option value="dark">داكن</option>
+              </select>
+            </div>
+
+            <div class="themeFormGroup">
+              <label for="fontSelect" class="themeFormLabel">اختر الخط</label>
+              <select id="fontSelect" class="themeFormSelect">
+                <option value="'Cairo', sans-serif">Cairo</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Arial">Arial</option>
+              </select>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="themeModalActions">
+            <button type="button" class="btn-save" id="saveSettingsBtn">
+              حفظ
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BACKUP MODAL ================= -->
+      <div class="backupOverlay" id="backupOverlay">
+        <div class="backupModal">
+          <div class="backupTitle">اختيار مكان الحفظ</div>
+
+          <div class="path-box" id="pathBox">لم يتم اختيار مسار بعد</div>
+
+          <div class="actions">
+            <button class="choose" onclick="chooseFolder()">
+              اختيار فولدر
+            </button>
+            <button class="close" onclick="closeModal()">إغلاق</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= FAVORITE SHORTCUT ================= -->
+      <div class="favouriteScreens">
+        <div class="favouriteItem">
+          <a href="favouriteScreens.html">الطابعات</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="../JS/master.js"></script>
+    <script src="../JS/favouriteScreen.js"></script>
+  </body>
+</html>

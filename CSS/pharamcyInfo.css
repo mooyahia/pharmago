@@ -1,0 +1,227 @@
+/* ================= ROOT VARIABLES ================= */
+/* Global CSS variables for colors, fonts, and theme settings */
+:root {
+  --primary-color: #283342;
+  --secondary-color: #009099;
+  --text-color: #131313;
+  --arrowStroke-color: #002325;
+  --delete-color: #D91F1F;
+  --button-color: #009099;
+  --buttonStroke-color: #283342;
+  --rowBackground-color: #d9f3f3;
+  --background-color: #D9D9D9;
+  --inputsBackground-color: #E3EBF3;
+  --font-family: "Inter", sans-serif;
+}
+
+
+/* ================= LAYOUT ================= */
+/* Main container layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ================= CONTENT ================= */
+/* Main content area */
+.content {
+  padding: 25px 30px;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+  font-size: 22px;
+  font-weight: 600;
+  color: #8a8a8a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Breadcrumb links */
+.breadcrumb a {
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+/* Active breadcrumb item */
+.breadcrumb span {
+  color: #000;
+}
+
+.breadcrumb i {
+  font-size: 15px;
+}
+
+/* Note text */
+.note {
+  font-size: 13px;
+  margin: 8px 0 20px;
+  color: #666;
+}
+
+/* Section heading */
+h3 {
+  margin: 25px 0 15px;
+  font-size: 18px;
+}
+
+/* ================= FORMS ================= */
+/* 3-column grid layout */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* 2-column grid layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Form field label */
+
+/* ================= ACTIONS ================= */
+/* Save button container */
+.pharmacyActions {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Base button style */
+.btn {
+  border: none;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background: #e84336;
+}
+
+/* ================= OVERLAY ================= */
+/* Full screen overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  display: none;
+}
+
+/* ================= ALERT BOX ================= */
+/* Alert popup container */
+.alert {
+  width: 350px;
+  height: 110px;
+  background-color: #b9c6d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #0aa6a6;
+}
+
+/* Alert button */
+.alert button {
+  background-color: #0aa6a6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+/* Adjust layout for large screens */
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Adjust layout for medium screens */
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Adjust layout for tablets */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .breadcrumb {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 668px) {
+  .grid-4,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Adjust layout for small screens */
+@media (max-width: 480px) {
+  .content {
+    padding: 15px;
+  }
+
+  .field input {
+    padding: 9px;
+  }
+
+  .breadcrumb {
+    font-size: 16px;
+  }
+}
+
+/* ================= EXTRA ELEMENTS ================= */
+/* Required field indicator */

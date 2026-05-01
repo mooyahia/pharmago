@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="AR" dir="rtl">
+  <head>
+    <!-- Meta configuration -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Info - Pharmacy Info</title>
+
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../CSS/menus.css" />
+    <link rel="stylesheet" href="../CSS/addProduct.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar section -->
+      <div class="sidebar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../Images/PharmaGo.svg" alt="" />
+          <span class="PharmaGo">Pharma Go</span>
+        </div>
+
+        <!-- User information -->
+        <div class="userInfo">
+          <img src="../Images/Self Picture.jpg" alt="" />
+          <div>
+            <span class="userName">محمد يحيى</span>
+            <br />
+            <span class="userRole"><small>مطور ويب</small></span>
+          </div>
+        </div>
+
+        <!-- Navigation menu -->
+        <div class="menu-wrapper">
+          <nav class="menu" id="tabMenus">
+            <a class="active generalInfo generalInfoWrapper" id="generalInfo">
+              <i class="fa-solid fa-sliders"></i>
+              <span class="MenuItemName">معلومات عامة</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="sales">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="MenuItemName">المبيعات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="inventory">
+              <i class="fa-solid fa-box"></i>
+              <span class="MenuItemName">المخزون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="purchases">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="MenuItemName">المشتريات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+
+            <span class="line"></span>
+
+            <a id="clients">
+              <i class="fa-solid fa-users"></i>
+              <span class="MenuItemName">المستخدمون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="suppliers">
+              <i class="fa-solid fa-truck"></i>
+              <span class="MenuItemName">الموردون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="accountAndFinance">
+              <i class="fa-solid fa-calculator"></i>
+              <span class="MenuItemName">الحسابات / المالية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="HR">
+              <i class="fa-solid fa-user-tie"></i>
+              <span class="MenuItemName">الموارد البشرية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="technicalHelp">
+              <i class="fa-solid fa-headset"></i>
+              <span class="MenuItemName">المساعدة التقنية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </nav>
+        </div>
+
+
+        <!-- Sidebar toggle button -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+          <i id="toggleIcon" class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+
+      
+      <div class="tabSubMenus">
+              <!-- Sub menus -->
+      <div
+        class="generalInfoSubMenus generalInfoWrapper"
+        id="generalInfoSubMenus"
+      >
+        <div class="generalInfoMenu" id="generalInfoMenu">
+          <a href="pharamcyInfo.html" class="no-submenu">معلومات الصيدلية</a>
+          <a class="user">المستخدم <i class="fa-solid fa-chevron-left"></i></a>
+          <a class="settings"
+            >الإعدادات <i class="fa-solid fa-chevron-left"></i
+          ></a>
+          <a class="database"
+            >قاعدة البيانات <i class="fa-solid fa-chevron-left"></i
+          ></a>
+          <a class="no-submenu">خروج</a>
+        </div>
+
+        <div class="userMenu">
+          <a id="lockApp">إيقاف البرنامج</a>
+          <a id="changePassword">تغيير كلمة المرور</a>
+             
+          <a href="favouriteScreens.html">الشاشات المفضلة</a>
+        </div>
+
+        <div class="settingsMenu">
+           
+          <a href="printers.html">الطابعات</a>
+            
+          <a id="theme">السمة</a>
+        </div>
+
+        <div class="databaseMenu">
+          <a id="backup">النسخ الاحتياطي</a>
+          <a href="regularMaintainance.html">صيانة عادية</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="salesSubMenus salesWrapper" id="salesSubMenus">
+        <div class="salesMenu" id="salesMenu">
+          <a href="sellingInvoice.html">فاتوره بيع</a>
+          <a href="returnSale.html">مرتجع بيع</a>
+          <span class="line"></span>
+          <a href="openingBalances.html">الأرصدة الافتتاحية</a>
+          <a href="drawerDelivery.html">تسليم الدرج</a>
+          <span class="line"></span>
+          <a href="salesReports.html">تقارير المبيعات</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="inventorySubMenus inventoryWrapper" id="inventorySubMenus">
+        <div class="inventoryMenu" id="inventoryMenu">
+          <a href="addProduct.html">إضافة صنف</a>
+          <a href="products.html">إدارة الأصناف</a>
+          <a href="alternatives.html">البدائل</a>
+          <a href="barcode.html">طباعة الباركود</a>
+          <a href="shortComingsSheet.html">كشكول النواقص</a>
+          <a href="inventory.html">المخزون</a>
+          <a href="inventoryReports.html">تقارير المخازن</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="purchasesSubMenus purchasesWrapper" id="purchasesSubMenus">
+        <div class="purchasesMenu" id="purchasesMenu">
+          <a href="purchaseInvoice.html">فاتوره شراء</a>
+          <a href="purchaseReports.html">تقارير المشتريات</a>
+        </div>
+      </div>
+
+
+      <!-- Sub menus -->
+      <div class="clientsSubMenus clientsWrapper" id="clientsSubMenus">
+        <div class="clientsMenu" id="clientsMenu">
+          <a href="addCustomer.html">إضافة عميل</a>
+          <a href="customerAccountStatement.html">كشف حساب عميل</a>
+          <a href="customers.html">إدارة العملاء</a>
+          <a href="clientsReports.html">تقارير العملاء</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="suppliersSubMenus suppliersWrapper" id="suppliersSubMenus">
+        <div class="suppliersMenu" id="suppliersMenu">
+          <a href="addSupplier.html">إضافة مورد</a>
+          <a href="suppliers.html">إدارة الموردين</a>
+          <a href="suppliersReports.html">تقارير الموردين</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div
+        class="accountsAndFinanceSubMenus accountsAndFinanceWrapper"
+        id="accountsAndFinanceSubMenus"
+      >
+        <div class="accountsAndFinanceMenu" id="accountsAndFinanceMenu">
+              
+               
+                
+          <a href="financialReports.html">التقارير المالية</a>
+        </div>
+      </div>
+
+      <!-- Sub menus -->
+      <div class="HRSubMenus HRWrapper" id="HRSubMenus">
+        <div class="HRMenu" id="HRMenu">
+          <a href="addEmployee.html">إضافة موظف</a>
+                 
+          <a href="employees.html">إدارة الموظفين</a>
+          <a href="userPermission.html">إدارة صلاحيات الموظفين</a>
+          <a href="employeeReports.html">تقارير الموظفين</a>
+        </div>
+      </div>
+
+
+      <!-- Sub menus -->
+      <div
+        class="technicalHelpSubMenus technicalHelpWrapper"
+        id="technicalHelpSubMenus"
+      >
+        <div class="technicalHelpMenu" id="technicalHelpMenu">
+          <a href="phoneCall.html">مكالمة هاتفية</a>
+          <a href="chat.html">محادثة فورية</a>
+        </div>
+      </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="main">
+        <!-- Top bar -->
+        <div class="topbar">
+          <div class="topLeft">
+            <div id="mobileSidebarToggle" class="sideBarIcon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Search input -->
+            <div class="search">
+              <input type="text" placeholder="ابحث عن أى شئ تريده هنا..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <!-- Branch and date info -->
+          <div class="branchAndDate">
+            <div>الفرع : <span class="branch" id="branch">المنيا</span></div>
+          </div>
+        </div>
+
+        <!-- Page content -->
+        <div class="content">
+          <div class="add-product-page">
+            <!-- Page title -->
+            <h1 class="page-title" id="formTitle">إضافة صنف جديد</h1>
+
+            <!-- Tabs navigation -->
+            <div class="tabs-navigation">
+              <button class="tab-button active" data-tab="basicInfoTab">
+                بيانات أساسية
+              </button>
+
+              <button class="tab-button" data-tab="unitsSuppliersTab">
+                الوحدات و الموردين
+              </button>
+            </div>
+
+            <!-- Tab 1: Basic Info -->
+            <div class="tab-content active" id="basicInfoTab">
+              <!-- Basic data form -->
+              <div class="form-box">
+                <div class="form-grid">
+                  <label>كود 1</label>
+                  <input type="text" id="productCode1" value="65546" />
+
+                  <label>اسم الصنف (ع)</label>
+                  <input type="text" id="productNameAr" class="required" />
+
+                  <label>اسم الصنف (En)</label>
+                  <input type="text" id="productNameEn" />
+
+                  <label>الشركة المنتجة</label>
+                  <input type="text" id="productCompany" value="GNC" />
+
+                  <label>الباركود</label>
+                  <div>
+                    <input type="text" id="companyCode" />
+                    <i class="fa-solid fa-camera" id="cameraBtn"></i>
+                  </div>
+
+                  <label>طبيعة الصنف</label>
+                  <input id="productType"/>
+
+
+
+                  <label>المجموعة</label>
+                  <input id="productGroup">
+                  </input>
+
+                  <label>دواعي الإستخدام</label>
+                  <input id="usageReasons">
+                  </input>
+
+                  <label>طرق الإستخدام</label>
+                  <input id="usageMethods">
+                  </input>
+
+                  <label>ملاحظات</label>
+                  <input type="text" id="productNotes" class="full-width" />
+                </div>
+              </div>
+
+              <!-- Options checkboxes -->
+              <div class="form-box">
+                <div class="checkbox-grid">
+                  <label
+                    ><input type="checkbox" id="isRegular" /> صنف معتاد</label
+                  >
+                  <label
+                    ><input type="checkbox" id="isFridge" /> صنف ثلاجة</label
+                  >
+                  <label
+                    ><input type="checkbox" id="hasExpiry" /> له تاريخ
+                    صلاحية</label
+                  >
+                  <label
+                    ><input type="checkbox" id="noPurchaseReturn" /> لا يرتجع
+                    شراء</label
+                  >
+                  <label
+                    ><input type="checkbox" id="printName" /> طباعة اسم
+                    الصنف</label
+                  >
+                  <label
+                    ><input type="checkbox" id="printBarcode" /> طباعة
+                    باركود</label
+                  >
+                </div>
+              </div>
+
+              <!-- Scientific data -->
+              <div class="form-box">
+                <div class="form-grid">
+                  <label>المجموعة العلمية</label>
+                  <input type="text" id="scientificGroup" />
+
+                  <label>المادة الفعالة الأساسية</label>
+                  <input type="text" id="activeIngredient" />
+
+                  <label>نسبة المادة الفعالة</label>
+                  <input type="text" id="activeIngredientPercent" />
+                </div>
+              </div>
+
+              <!-- Discount section -->
+              <div class="form-box">
+                <div class="form-grid">
+                  <label>أقصى خصم قيمة</label>
+                  <input type="text" id="maxDiscountValue" />
+
+                  <label>أقصى خصم نسبة</label>
+                  <input type="text" id="maxDiscountPercent" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Units & Suppliers -->
+            <div class="tab-content" id="unitsSuppliersTab">
+
+              <!-- Units configuration -->
+              <div class="form-box">
+                <div class="form-grid">
+                  <label>الحد الأدنى</label>
+                  <input type="text" id="minQuantity" />
+
+                  <label>حد الطلب</label>
+                  <input type="text" id="orderLimit" />
+
+
+                  <label>وحدة البيع</label>
+                  <input id="saleUnit">
+                  </input>
+
+                  <label>وحدة الشراء</label>
+                  <input id="purchaseUnit">
+                  </input>
+
+                </div>
+              </div>
+
+              <!-- Price configuration -->
+              <div class="form-box">
+                <div class="form-grid">
+                  <label>سعر الشراء</label>
+                  <input type="text" id="purchasePrice"  />
+
+                  <label>نسبة خصم</label>
+                  <input type="text" id="discountPercent"  />
+
+                  <label>الضريبة</label>
+                  <input type="text" id="taxValue"  />
+
+                  <label>سعر البيع</label>
+                  <input type="text" id="salePrice"  />
+                </div>
+              </div>
+
+              <!-- Suppliers table -->
+              <div class="form-box suppliers">
+                <div class="title">الموردين</div>
+
+<div class="tableWrap">
+                  <table class="suppliers-table" >
+                  <thead>
+                    <tr>
+                      <th>كود</th>
+                      <th>اسم المورد</th>
+                      <th>كود الصنف</th>
+                      <th>سعر الشراء</th>
+                      <th>الضريبة</th>
+                      <th>سعر البيع</th>
+                      <th>خصم 1</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="suppliersTable">
+                    <tr>
+                      <td>173</td>
+                      <td>AURIGA</td>
+                      <td></td>
+                      <td>55</td>
+                      <td>0</td>
+                      <td>55</td>
+                      <td>0</td>
+                    </tr>
+                  </tbody>
+                </table>
+</div>
+
+                <!-- Table action buttons -->
+                <div class="table-buttons">
+                  <button  class="btn-add" id="addSupplierBtn">إضافة</button>
+                  <button  class="btn-edit" id="editSupplierBtn">تعديل</button>
+                  <button  class="btn-close" id="deleteSupplierBtn">حذف</button>
+                </div>
+              </div>
+
+              <!-- Popup for adding/editing supplier -->
+              <div class="popup" id="popup">
+                <div class="popup-content">
+                  <span class="close" id="closePopup">✖</span>
+                  <h3 id="popupTitle">إضافة مورد</h3>
+
+                  <input type="text" id="supplierCode" placeholder="الكود" />
+                  <input type="text" id="supplierName" placeholder="اسم المورد" />
+                  <input type="text" id="itemCode" placeholder="كود الصنف" />
+                  <input type="text" id="buyPrice" placeholder="سعر الشراء" />
+                  <input type="text" id="tax" placeholder="الضريبة" />
+                  <input type="text" id="sellPrice" placeholder="سعر البيع" />
+                  <input type="text" id="disc1" placeholder="خصم" />
+
+                  <button id="supplierSaveBtn">حفظ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="form-actions">
+              <button class="btn-save" id="saveProductBtn">حفظ S</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        <div class="popupPages">
+
+
+ <div id="cameraOverlay" class="cameraOverlay">
+
+  <button id="closeCamera" class="closeCamera">×</button>
+  <div id="reader" class="reader">
+  </div>
+</div>
+
+
+
+          <!-- Lock screen -->
+          <div id="lockScreen" class="lock-screen">
+            <div class="lock-box">
+              <h3>تم إيقاف البرنامج مؤقتًا، قم بتسجيل الدخول لفتحه</h3>
+
+              <div class="unlockInputs">
+                <div>
+                  <label for="unlockUserName">اسم المستخدم</label>
+                  <input
+                    type="text"
+                    id="unlockUserName"
+                    placeholder=" اسم المستخدم"
+                  />
+                </div>
+
+                <div>
+                  <label for="unlockPassword">كلمة المرور</label>
+                  <input
+                    type="password"
+                    id="unlockPassword"
+                    placeholder=" كلمة المرور"
+                  />
+                </div>
+              </div>
+
+              <button id="unlockButton">فتح البرنامج</button>
+            </div>
+          </div>
+
+          <!-- Change password -->
+          <div id="changePasswordScreen" class="changePasswordScreen">
+            <div class="changePasswordBox">
+              <i class="fa-solid fa-x" id="closeChangePasswordScreen"></i>
+
+              <h3>تغيير كلمة المرور</h3>
+
+              <div class="changePasswordInputs">
+                <div>
+                  <label for="oldPassword">كلمة المرور القديمة</label>
+                  <input
+                    type="password"
+                    id="oldPassword"
+                    placeholder=" كلمة المرور القديمة"
+                  />
+                </div>
+
+                <div>
+                  <label for="newPassword">كلمة المرور الجديدة</label>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    placeholder=" كلمة المرور الجديدة"
+                  />
+                </div>
+
+                <div>
+                  <label for="newPasswordConfirmation"
+                    >تأكيد كلمة المرور الجديدة</label
+                  >
+                  <input
+                    type="password"
+                    id="newPasswordConfirmation"
+                    placeholder=" تأكيد كلمة المرور الجديدة"
+                  />
+                </div>
+              </div>
+
+              <button id="changePasswordButton">تغيير كلمة المرور</button>
+            </div>
+          </div>
+
+          <!-- Theme modal -->
+          <div class="theme-overlay" id="themeOverlay">
+            <div class="theme-modal" id="themeModal">
+              <div class="themeModalHeader">
+                <h2 class="themeModalTitle">إعدادات المظهر</h2>
+                <button class="theme-modal__close-btn" id="closeModalBtn">
+                  &times;
+                </button>
+              </div>
+
+              <form class="theme-form" id="themeForm">
+                <div class="themeFormGroup">
+                  <label for="themeSelect" class="themeFormLabel"
+                    >اختر الثيم</label
+                  >
+                  <select id="themeSelect" class="themeFormSelect">
+                    <option value="light">فاتح</option>
+                    <option value="dark">داكن</option>
+                  </select>
+                </div>
+
+                <div class="themeFormGroup">
+                  <label for="fontSelect" class="themeFormLabel"
+                    >اختر الخط</label
+                  >
+                  <select id="fontSelect" class="themeFormSelect">
+                    <option value="'Cairo', sans-serif">Cairo</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Arial">Arial</option>
+                  </select>
+                </div>
+              </form>
+
+              <div class="themeModalActions">
+                <button type="button" class="btn-save" id="saveSettingsBtn">
+                  حفظ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backup modal -->
+          <div class="backupOverlay" id="backupOverlay">
+            <div class="backupModal">
+              <div class="backupTitle">مكان الحفظ</div>
+
+               
+              <input
+                type="text"
+                id="backupPathInput"
+                class="path-box"
+                placeholder="مسار النسخ الإحتياطي"
+              />
+
+              <div class="actions">
+                <button id="saveBackupBtn" class="choose">حفظ</button>
+
+                <button id="closeBackupBtn" class="close">إغلاق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Favourite screens -->
+      <div class="favouriteScreens">
+        <div class="favouriteItem">
+          <a href="favouriteScreens.html">الطابعات</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+     <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="../JS/addProduct.js"></script>
+    <script src="../JS/master.js"></script>
+  </body>
+</html>

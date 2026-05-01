@@ -1,0 +1,126 @@
+    :root {
+      --primary-color: #283342;
+      --secondary-color: #009099;
+      --text-color: #131313;
+      --arrowStroke-color: #002325;
+      --delete-color: #d91f1f;
+      --button-color: #009099;
+      --buttonStroke-color: #283342;
+      --rowBackground-color: #c8ecec;
+      --background-color: #d9d9d9;
+      --inputsBackground-color: #e3ebf3;
+      --font-family: "Inter", sans-serif;
+    }
+
+    /* ================= MAIN CONTAINER ================= */
+    .content {
+      padding: 20px;
+    }
+
+    /* ================= PAGE HEADER ================= */
+    .page-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* ================= FILTER SECTION ================= */
+    .filter-section {
+      background: #fff;
+      padding: 15px;
+      border: 2px solid var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* ================= INPUTS ================= */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .form-input {
+      padding: 6px;
+      border: 1px solid var(--primary-color);
+      background-color: var(--inputsBackground-color);
+      min-width: 150px;
+    }
+
+    /* ================= BUTTONS ================= */
+    .btn {
+      padding: 8px 16px;
+      border: 2px solid var(--buttonStroke-color);
+      background-color: var(--button-color);
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* ================= REPORT SECTION ================= */
+    .report-container {
+      background: #fff;
+      border: 2px solid var(--primary-color);
+      padding: 20px;
+    }
+
+    .report-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .report-date {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    /* ================= TABLE ================= */
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .report-table th,
+    .report-table td {
+      border: 1px solid var(--primary-color);
+      padding: 8px;
+    }
+
+    .report-table th {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .report-table tr:nth-child(even) {
+      background-color: var(--rowBackground-color);
+    }
+
+    /* ================= FOOTER BUTTONS ================= */
+    .page-actions {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }

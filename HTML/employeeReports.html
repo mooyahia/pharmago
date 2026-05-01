@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="AR" dir="rtl">
+  <head>
+    <!-- Meta configuration -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Info - Pharmacy Info</title>
+
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../CSS/menus.css" />
+    <link rel="stylesheet" href="../CSS/employeeReports.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Logo section -->
+        <div class="logo">
+          <img src="../Images/PharmaGo.svg" alt="" />
+          <span class="PharmaGo">Pharma Go</span>
+        </div>
+
+        <!-- User info -->
+        <div class="userInfo">
+          <img src="../Images/Self Picture.jpg" alt="" />
+          <div>
+            <span class="userName">محمد يحيى</span>
+            <br />
+            <span class="userRole"><small>مطور ويب</small></span>
+          </div>
+        </div>
+
+        <!-- Navigation menu -->
+        <div class="menu-wrapper">
+          <nav class="menu" id="tabMenus">
+            <a class="active generalInfo generalInfoWrapper" id="generalInfo">
+              <i class="fa-solid fa-sliders"></i>
+              <span class="MenuItemName">معلومات عامة</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="sales">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="MenuItemName">المبيعات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="inventory">
+              <i class="fa-solid fa-box"></i>
+              <span class="MenuItemName">المخزون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="purchases">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="MenuItemName">المشتريات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="clients">
+              <i class="fa-solid fa-users"></i>
+              <span class="MenuItemName">المستخدمون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="suppliers">
+              <i class="fa-solid fa-truck"></i>
+              <span class="MenuItemName">الموردون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="accountAndFinance">
+              <i class="fa-solid fa-calculator"></i>
+              <span class="MenuItemName">الحسابات / المالية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="HR">
+              <i class="fa-solid fa-user-tie"></i>
+              <span class="MenuItemName">الموارد البشرية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="technicalHelp">
+              <i class="fa-solid fa-headset"></i>
+              <span class="MenuItemName">المساعدة التقنية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Sidebar toggle -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+          <i id="toggleIcon" class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <div class="tabSubMenus">
+        <!-- Sub menus -->
+        <div
+          class="generalInfoSubMenus generalInfoWrapper"
+          id="generalInfoSubMenus"
+        >
+          <div class="generalInfoMenu" id="generalInfoMenu">
+            <a href="pharamcyInfo.html" class="no-submenu">معلومات الصيدلية</a>
+            <a class="user"
+              >المستخدم <i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <a class="settings"
+              >الإعدادات <i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <a class="database"
+              >قاعدة البيانات <i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <a class="no-submenu">خروج</a>
+          </div>
+
+          <div class="userMenu">
+            <a id="lockApp">إيقاف البرنامج</a>
+            <a id="changePassword">تغيير كلمة المرور</a>
+               
+            <a href="favouriteScreens.html">الشاشات المفضلة</a>
+          </div>
+
+          <div class="settingsMenu">
+             
+            <a href="printers.html">الطابعات</a>
+              
+            <a id="theme">السمة</a>
+          </div>
+
+          <div class="databaseMenu">
+            <a id="backup">النسخ الاحتياطي</a>
+            <a href="regularMaintainance.html">صيانة عادية</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="salesSubMenus salesWrapper" id="salesSubMenus">
+          <div class="salesMenu" id="salesMenu">
+            <a href="sellingInvoice.html">فاتوره بيع</a>
+            <a href="returnSale.html">مرتجع بيع</a>
+            <span class="line"></span>
+            <a href="openingBalances.html">الأرصدة الافتتاحية</a>
+            <a href="drawerDelivery.html">تسليم الدرج</a>
+            <span class="line"></span>
+            <a href="salesReports.html">تقارير المبيعات</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="inventorySubMenus inventoryWrapper" id="inventorySubMenus">
+          <div class="inventoryMenu" id="inventoryMenu">
+            <a href="addProduct.html">إضافة صنف</a>
+            <a href="products.html">إدارة الأصناف</a>
+            <a href="alternatives.html">البدائل</a>
+            <a href="barcode.html">طباعة الباركود</a>
+            <a href="shortComingsSheet.html">كشكول النواقص</a>
+            <a href="inventory.html">المخزون</a>
+            <a href="inventoryReports.html">تقارير المخازن</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="purchasesSubMenus purchasesWrapper" id="purchasesSubMenus">
+          <div class="purchasesMenu" id="purchasesMenu">
+            <a href="purchaseInvoice.html">فاتوره شراء</a>
+            <a href="purchaseReports.html">تقارير المشتريات</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="clientsSubMenus clientsWrapper" id="clientsSubMenus">
+          <div class="clientsMenu" id="clientsMenu">
+            <a href="addCustomer.html">إضافة عميل</a>
+            <a href="customerAccountStatement.html">كشف حساب عميل</a>
+            <a href="customers.html">إدارة العملاء</a>
+            <a href="clientsReports.html">تقارير العملاء</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="suppliersSubMenus suppliersWrapper" id="suppliersSubMenus">
+          <div class="suppliersMenu" id="suppliersMenu">
+            <a href="addSupplier.html">إضافة مورد</a>
+            <a href="suppliers.html">إدارة الموردين</a>
+            <a href="suppliersReports.html">تقارير الموردين</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div
+          class="accountsAndFinanceSubMenus accountsAndFinanceWrapper"
+          id="accountsAndFinanceSubMenus"
+        >
+          <div class="accountsAndFinanceMenu" id="accountsAndFinanceMenu">
+                
+                 
+                  
+            <a href="financialReports.html">التقارير المالية</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="HRSubMenus HRWrapper" id="HRSubMenus">
+          <div class="HRMenu" id="HRMenu">
+            <a href="addEmployee.html">إضافة موظف</a>
+                   
+            <a href="employees.html">إدارة الموظفين</a>
+            <a href="userPermission.html">إدارة صلاحيات الموظفين</a>
+            <a href="employeeReports.html">تقارير الموظفين</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div
+          class="technicalHelpSubMenus technicalHelpWrapper"
+          id="technicalHelpSubMenus"
+        >
+          <div class="technicalHelpMenu" id="technicalHelpMenu">
+            <a href="phoneCall.html">مكالمة هاتفية</a>
+            <a href="chat.html">محادثة فورية</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main section -->
+      <div class="main">
+        <!-- Top bar -->
+        <div class="topbar">
+          <div class="topLeft">
+            <div id="mobileSidebarToggle" class="sideBarIcon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Search input -->
+            <div class="search">
+              <input type="text" placeholder="ابحث عن أى شئ تريده هنا..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <!-- Branch and date -->
+          <div class="branchAndDate">
+            <div>الفرع : <span class="branch">المنيا</span></div>
+          </div>
+        </div>
+    <main id="page-content" role="main">
+
+      <div id="api-banner" role="status">
+        <span>✨</span><span id="api-banner-msg">جاري تحليل بيانات الموارد البشرية…</span>
+      </div>
+
+      <!-- KPI -->
+      <section aria-label="مؤشرات الموارد البشرية">
+        <div id="kpi-grid">
+          <div class="kpi-card" style="animation-delay:.04s">
+            <div class="kpi-card-header">
+              <span class="kpi-card-label">إجمالي الموظفين</span>
+              <div class="kpi-card-icon teal">👥</div>
+            </div>
+            <div class="kpi-card-value" id="kpi-employees">٩٨</div>
+            <div class="kpi-card-sub"><span class="kpi-delta up">↑ ٦٪</span> مقارنة بالشهر الماضي</div>
+          </div>
+          <div class="kpi-card" style="animation-delay:.08s">
+            <div class="kpi-card-header">
+              <span class="kpi-card-label">معدل الحضور</span>
+              <div class="kpi-card-icon blue">📅</div>
+            </div>
+            <div class="kpi-card-value" id="kpi-attendance">٪٩٤.٥</div>
+            <div class="kpi-card-sub">متوسط شهري</div>
+          </div>
+          <div class="kpi-card" style="animation-delay:.12s">
+            <div class="kpi-card-header">
+              <span class="kpi-card-label">مرتبات هذا الشهر</span>
+              <div class="kpi-card-icon orange">💰</div>
+            </div>
+            <div class="kpi-card-value" id="kpi-salaries">٤٧</div>
+            <div class="kpi-card-sub">خطط الإجازات الممنوحة</div>
+          </div>
+          <div class="kpi-card" style="animation-delay:.16s">
+            <div class="kpi-card-header">
+              <span class="kpi-card-label">إجازات مفتوحة</span>
+              <div class="kpi-card-icon red">🏖️</div>
+            </div>
+            <div class="kpi-card-value" id="kpi-leaves">٢</div>
+            <div class="kpi-card-sub">طلبات إجازة قيد المراجعة</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Charts Row 1: donut + orange bars -->
+      <section aria-label="توزيع الموظفين والرواتب">
+        <div id="charts-row-1">
+          <!-- Donut: مستخلصات الموظفين في الوردية -->
+          <div class="chart-card" style="animation-delay:.2s">
+            <div class="chart-card-header">
+              <div class="chart-card-title">مستخلصات الموظفين في الوردية</div>
+            </div>
+            <div id="hr-donut-wrap">
+              <svg id="hr-donut-svg" width="150" height="150" viewBox="0 0 150 150" aria-hidden="true">
+                <defs>
+                  <linearGradient id="hrGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#14B8A6" stop-opacity=".5"/>
+                    <stop offset="100%" stop-color="#14B8A6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div id="hr-donut-legend"></div>
+            </div>
+          </div>
+          <!-- Orange bar: سجل الرواتب الشهري -->
+          <div class="chart-card" style="animation-delay:.25s">
+            <div class="chart-card-header">
+              <div class="chart-card-title">سجل الرواتب الشهري</div>
+            </div>
+            <div style="display:flex;align-items:flex-end;gap:8px;">
+              <div id="sal-bar-yaxis" style="display:flex;flex-direction:column;justify-content:space-between;height:140px;padding-bottom:2px;">
+                <span style="font-size:.6rem;color:var(--clr-text-dim)">400K</span>
+                <span style="font-size:.6rem;color:var(--clr-text-dim)">300K</span>
+                <span style="font-size:.6rem;color:var(--clr-text-dim)">200K</span>
+                <span style="font-size:.6rem;color:var(--clr-text-dim)">100K</span>
+                <span style="font-size:.6rem;color:var(--clr-text-dim)">0</span>
+              </div>
+              <div id="salary-bar-chart" role="img" aria-label="سجل الرواتب الشهري"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Line Chart: تطور الرواتب -->
+      <section class="chart-card" id="salary-line-section" aria-label="تطور الرواتب الشهرية" style="animation-delay:.3s">
+        <div class="chart-card-header">
+          <div class="chart-card-title">تطور الرواتب الشهرية</div>
+        </div>
+        <svg id="salary-line-svg" viewBox="0 0 1060 140" preserveAspectRatio="none" style="width:100%;overflow:visible" aria-label="تطور الرواتب">
+          <defs>
+            <linearGradient id="hrGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#14B8A6" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#14B8A6" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g id="sl-grid"></g>
+          <g id="sl-area-g"></g>
+          <g id="sl-path-g"></g>
+          <g id="sl-dots-g"></g>
+          <g id="sl-xlabels"></g>
+          <g id="sl-ylabels"></g>
+        </svg>
+      </section>
+
+      <!-- AI Insights -->
+      <div id="ai-insights-section"></div>
+
+      <!-- Employees Table -->
+      <section class="table-card" id="employees-section" aria-label="قائمة الموظفين" style="animation-delay:.38s">
+        <div class="table-card-header">
+          <div style="display:flex;align-items:center;gap:8px;"><span>👤</span><h2>قائمة الموظفين</h2></div>
+          <input id="search-employees" type="text" placeholder="بحث عن موظف…"
+            style="background:var(--clr-surface2);border:1px solid var(--clr-border);border-radius:var(--radius-sm);padding:5px 10px;color:var(--clr-text);font-family:inherit;font-size:.75rem;outline:none;width:170px;" />
+        </div>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="employees-table">
+            <thead>
+              <tr>
+                <th>رقم الموظف</th>
+                <th>الاسم</th>
+                <th>القسم</th>
+                <th>تاريخ الانضمام</th>
+                <th>الراتب</th>
+                <th>الحالة</th>
+              </tr>
+            </thead>
+            <tbody id="employees-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Leave Requests Table -->
+      <section class="table-card" id="leaves-section" aria-label="طلبات الإجازات" style="animation-delay:.43s">
+        <div class="table-card-header">
+          <div style="display:flex;align-items:center;gap:8px;"><span>🏖️</span><h2>طلبات الإجازات</h2></div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="leaves-table">
+            <thead>
+              <tr>
+                <th>الموظف</th>
+                <th>نوع الإجازة</th>
+                <th>تاريخ البدء</th>
+                <th>تاريخ الانتهاء</th>
+                <th>عدد الأيام</th>
+                <th>الحالة</th>
+              </tr>
+            </thead>
+            <tbody id="leaves-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Performance Table -->
+      <section class="table-card" id="performance-section" aria-label="تقييمات الأداء" style="animation-delay:.48s">
+        <div class="table-card-header">
+          <div style="display:flex;align-items:center;gap:8px;"><span>📊</span><h2>تقييمات الأداء</h2></div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="performance-table">
+            <thead>
+              <tr>
+                <th>الموظف</th>
+                <th>التقييم</th>
+                <th>آخر مراجعة</th>
+                <th>المراجعة القادمة</th>
+              </tr>
+            </thead>
+            <tbody id="performance-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+      </div>
+
+      <div>
+
+        <div class="popupPages">
+          <!-- Lock screen -->
+          <div id="lockScreen" class="lock-screen">
+            <div class="lock-box">
+              <h3>تم إيقاف البرنامج مؤقتًا، قم بتسجيل الدخول لفتحه</h3>
+
+              <div class="unlockInputs">
+                <div>
+                  <label for="unlockUserName">اسم المستخدم</label>
+                  <input
+                    type="text"
+                    id="unlockUserName"
+                    placeholder=" اسم المستخدم"
+                  />
+                </div>
+
+                <div>
+                  <label for="unlockPassword">كلمة المرور</label>
+                  <input
+                    type="password"
+                    id="unlockPassword"
+                    placeholder=" كلمة المرور"
+                  />
+                </div>
+              </div>
+
+              <button id="unlockButton">فتح البرنامج</button>
+            </div>
+          </div>
+
+          <!-- Change password -->
+          <div id="changePasswordScreen" class="changePasswordScreen">
+            <div class="changePasswordBox">
+              <i class="fa-solid fa-x" id="closeChangePasswordScreen"></i>
+
+              <h3>تغيير كلمة المرور</h3>
+
+              <div class="changePasswordInputs">
+                <div>
+                  <label for="oldPassword">كلمة المرور القديمة</label>
+                  <input
+                    type="password"
+                    id="oldPassword"
+                    placeholder=" كلمة المرور القديمة"
+                  />
+                </div>
+
+                <div>
+                  <label for="newPassword">كلمة المرور الجديدة</label>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    placeholder=" كلمة المرور الجديدة"
+                  />
+                </div>
+
+                <div>
+                  <label for="newPasswordConfirmation"
+                    >تأكيد كلمة المرور الجديدة</label
+                  >
+                  <input
+                    type="password"
+                    id="newPasswordConfirmation"
+                    placeholder=" تأكيد كلمة المرور الجديدة"
+                  />
+                </div>
+              </div>
+
+              <button id="changePasswordButton">تغيير كلمة المرور</button>
+            </div>
+          </div>
+
+          <!-- Theme modal -->
+          <div class="theme-overlay" id="themeOverlay">
+            <div class="theme-modal" id="themeModal">
+              <div class="themeModalHeader">
+                <h2 class="themeModalTitle">إعدادات المظهر</h2>
+                <button class="theme-modal__close-btn" id="closeModalBtn">
+                  &times;
+                </button>
+              </div>
+
+              <form class="theme-form" id="themeForm">
+                <div class="themeFormGroup">
+                  <label for="themeSelect" class="themeFormLabel"
+                    >اختر الثيم</label
+                  >
+                  <select id="themeSelect" class="themeFormSelect">
+                    <option value="light">فاتح</option>
+                    <option value="dark">داكن</option>
+                  </select>
+                </div>
+
+                <div class="themeFormGroup">
+                  <label for="fontSelect" class="themeFormLabel"
+                    >اختر الخط</label
+                  >
+                  <select id="fontSelect" class="themeFormSelect">
+                    <option value="'Cairo', sans-serif">Cairo</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Arial">Arial</option>
+                  </select>
+                </div>
+              </form>
+
+              <div class="themeModalActions">
+                <button type="button" class="btn-save" id="saveSettingsBtn">
+                  حفظ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backup modal -->
+          <div class="backupOverlay" id="backupOverlay">
+            <div class="backupModal">
+              <div class="backupTitle">مكان الحفظ</div>
+
+               
+              <input
+                type="text"
+                id="backupPathInput"
+                class="path-box"
+                placeholder="مسار النسخ الإحتياطي"
+              />
+
+              <div class="actions">
+                <button id="saveBackupBtn" class="choose">حفظ</button>
+
+                <button id="closeBackupBtn" class="close">إغلاق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Favourite screens -->
+      <div class="favouriteScreens">
+        <div class="favouriteItem">
+          <a href="favouriteScreens.html">الطابعات</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../JS/master.js"></script>
+    <script src="../JS/employeeReports.js"></script>
+  </body>
+</html>

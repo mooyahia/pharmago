@@ -1,0 +1,167 @@
+/* ================= CONTENT ================= */
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.content-header h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.content-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* ================= CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* لما الشاشة تكون أصغر من 1024px – 2 كارد في الصف */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* لما الشاشة تكون أصغر من 640px – كارد واحد في الصف */
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.card.status {
+  border-color: #22c55e;
+}
+.card.revenue {
+  border-color: #facc15;
+}
+.card.availablility {
+  border-color: #3b82f6;
+}
+.card.alert {
+  border-color: #ef4444;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+.card {
+  position: relative;
+  overflow: hidden; 
+  height: 150px;
+}
+
+.card .action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  text-align: center;
+  color: black;
+  height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+}
+.card.status .action {
+  background-color: rgba(1, 167, 104, 0.3); /* Using rgba for transparency */
+
+}.card.revenue .action {
+  background-color: rgba(250, 204, 21, 0.3); /* Using rgba for transparency */
+
+}
+.card.availablility .action {
+  background-color: #03A9F54D; /* Using rgba for transparency */
+
+}
+.card.alert .action {
+  background-color: rgba(239, 68, 68, 0.3); /* Using rgba for transparency */
+
+}
+
+/* ================= SECTIONS ================= */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .sections {
+    grid-template-columns: 1fr;
+  }
+}
+.section {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-weight: 600;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #1D242E4D;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 24px;
+}
+
+.stat p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+
+input{
+  border-radius: 10px;
+}
