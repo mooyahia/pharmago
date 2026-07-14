@@ -1,0 +1,88 @@
+/* ================= MAIN ================= */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ================= TITLE ================= */
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ================= FORM ================= */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 8px;
+}
+
+/* ================= TABLE ================= */
+.table-section {
+  margin-top: 30px;
+}
+
+.table-title {
+  margin-bottom: 10px;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts-table th,
+.contacts-table td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* ================= SELECTED ROW ================= */
+.selected-row {
+  background-color: #d0e7ff;
+}
+
+/* ================= BUTTONS ================= */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-save {
+  background: teal;
+  color: white;
+}
+
+.btn-delete {
+  background: teal;
+  color: white;
+}
+
+.btn-close {
+  background: red;
+  color: white;
+}

@@ -1,0 +1,90 @@
+    /* ===== Container الرئيسي ===== */
+    /* ===== Header ===== */
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .close-btn {
+      cursor: pointer;
+      font-size: 20px;
+      color: #555;
+    }
+
+    /* ===== Grid Layout ===== */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    /* ===== Full width fields ===== */
+    .full-width {
+      grid-column: span 3;
+    }
+
+    /* ===== Section Title ===== */
+    .section-title {
+      grid-column: span 3;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    /* ===== Input Group ===== */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    /* ===== Buttons ===== */
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-save {
+      background: #1abc9c;
+      color: #fff;
+    }
+
+    .btn-details {
+      background: #16a085;
+      color: #fff;
+    }
+
+    .btn-close {
+      background: #e74c3c;
+      color: #fff;
+    }

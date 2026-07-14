@@ -1,0 +1,205 @@
+/* ================= ROOT VARIABLES ================= */
+/* Global CSS variables for colors, fonts, and theme settings */
+:root {
+  --primary-color: #283342;
+  --secondary-color: #009099;
+  --text-color: #131313;
+  --arrowStroke-color: #002325;
+  --delete-color: #d91f1f;
+  --button-color: #009099;
+  --buttonStroke-color: #283342;
+  --rowBackground-color: #c8ecec;
+  --background-color: #d9d9d9;
+  --inputsBackground-color: #e3ebf3;
+  --font-family: "Inter", sans-serif;
+}
+
+/* ================= PAGE TITLE ================= */
+/* Main page title styling */
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* ================= TABS ================= */
+/* Tabs container with bottom border */
+.tabs-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Individual tab button */
+.tab-button {
+  padding: 10px 25px;
+  border: none;
+  background: var(--background-color);
+  color: rgba(19, 19, 19, 0.5);
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Active tab state */
+.tab-button.active {
+  background: var(--secondary-color);
+  color: #fff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ================= TAB CONTENT ================= */
+/* Hidden by default */
+.tab-content {
+  display: none;
+}
+
+/* Visible when active */
+.tab-content.active {
+  display: block;
+}
+
+/* ================= GRID LAYOUT ================= */
+/* Main layout for employee section */
+.employee-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* ================= CARD BOX ================= */
+/* Container box with shadow and padding */
+.card-box {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= BOX TITLE ================= */
+/* Title inside each card/box */
+.box-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+  color: #34495e;
+}
+
+/* ================= FORM GRID ================= */
+/* Grid layout for form fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ================= FORM FIELD ================= */
+/* Wrapper for label and input */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Label styling */
+.form-field label {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Inputs and selects inside form */
+.form-field input,
+.form-field select {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid #dfe6ec;
+  background: #f7f9fc;
+}
+
+/* ================= PASSWORD FIELD ================= */
+/* Container for password input and button */
+.password-field {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Password input takes full width */
+.password-field input {
+  flex: 1;
+}
+
+/* Password toggle button */
+.password-button {
+  background: #ddd;
+  border: none;
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ================= PERMISSIONS ================= */
+/* Permissions container */
+.permissions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+/* Single permission item */
+.permission-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+/* ================= ACTION BUTTONS ================= */
+/* Container for page action buttons */
+.page-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Base button style */
+.btn {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Save button */
+.btn-save {
+  background: #16a085;
+  color: white;
+}
+
+/* Close button */
+.btn-close {
+  background: #e74c3c;
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+  }
+}

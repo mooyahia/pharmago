@@ -1,0 +1,268 @@
+/* ================= ROOT VARIABLES ================= */
+/* Global CSS variables for colors, fonts, and theme settings */
+:root {
+  --primary-color: #283342;
+  --secondary-color: #009099;
+  --text-color: #131313;
+  --arrowStroke-color: #002325;
+  --delete-color: #d91f1f;
+  --button-color: #009099;
+  --buttonStroke-color: #283342;
+  --rowBackground-color: #c8ecec;
+  --background-color: #d9d9d9;
+  --inputsBackground-color: #e3ebf3;
+  --font-family: "Inter", sans-serif;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    flex: 1;
+    padding: 30px 35px 85px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* ================= SEARCH BOX ================= */
+.search-box {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.search-box div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search-box div label {
+    display: block;
+    font-weight: 500;
+}
+
+.search-box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.btn-search {
+    background: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ================= TABLE ================= */
+.table-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid var(--buttonStroke-color);
+    height: 350px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-weight: 600;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr.selected {
+    background: var(--rowBackground-color);
+    color: black;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.add, .edit{
+    background: var(--button-color);
+}
+
+.close, .delete  {
+    background: var(--delete-color);
+}
+
+/* ================= POPUP ================= */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.popup-content h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.popup-content input,
+.popup-content select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 10px;
+    background: #0f8b8d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #3498db;
+    border-right: 4px solid #3498db;
+    padding-right: 10px;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* ================= FORM GROUP ================= */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+}
+
+/* ================= CHECKBOX ================= */
+.checkbox {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 14px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox label {
+    cursor: pointer;
+    margin: 0;
+}
+
+/* ================= BUTTONS ================= */
+.save-btn {
+    background: #2ecc71;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}

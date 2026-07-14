@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="AR" dir="rtl">
+  <head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Info - Pharmacy Info</title>
+
+    <!-- ================= FONT AWESOME ================= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- ================= STYLES ================= -->
+    <link rel="stylesheet" href="../CSS/menus.css" />
+    <link rel="stylesheet" href="../CSS/customers.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ================= SIDEBAR ================= -->
+      <div class="sidebar">
+        <!-- Logo Section -->
+        <div class="logo">
+          <img src="../Images/PharmaGo.svg" alt="" />
+          <span class="PharmaGo">Pharma Go</span>
+        </div>
+
+        <!-- User Info -->
+        <div class="userInfo">
+          <div>
+            <div class="userName" id="userNameInSidebar">محمد يحيى</div>
+
+            -
+            <div class="userRole">
+              <small id="userRoleInSidebar">مطور ويب</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation menu -->
+        <div class="menu-wrapper">
+          <nav class="menu" id="tabMenus">
+            <a class="active generalInfo generalInfoWrapper" id="generalInfo">
+              <i class="fa-solid fa-sliders"></i>
+              <span class="MenuItemName">معلومات عامة</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="sales">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="MenuItemName">المبيعات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="inventory">
+              <i class="fa-solid fa-box"></i>
+              <span class="MenuItemName">المخزون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="purchases">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="MenuItemName">المشتريات</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="clients">
+              <i class="fa-solid fa-users"></i>
+              <span class="MenuItemName">العملاء</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a id="suppliers">
+              <i class="fa-solid fa-truck"></i>
+              <span class="MenuItemName">الموردون</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="accountAndFinance">
+              <i class="fa-solid fa-calculator"></i>
+              <span class="MenuItemName">الحسابات / المالية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="HR">
+              <i class="fa-solid fa-user-tie"></i>
+              <span class="MenuItemName">الموارد البشرية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <span class="line"></span>
+
+            <a id="technicalHelp">
+              <i class="fa-solid fa-headset"></i>
+              <span class="MenuItemName">المساعدة التقنية</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Sidebar toggle -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+          <i id="toggleIcon" class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <div class="tabSubMenus" id="tabSubMenus">
+        <!-- Sub menus -->
+        <div
+          class="generalInfoSubMenus generalInfoWrapper"
+          id="generalInfoSubMenus"
+        >
+          <div class="generalInfoMenu" id="generalInfoMenu">
+            <a
+              href="pharmacyInfo.html"
+              class="no-submenu"
+              id="pharmacyInfoSubMenu"
+              >معلومات الصيدلية</a
+            >
+            <a class="user"
+              >المستخدم <i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <a class="settings"
+              >الإعدادات <i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <a class="no-submenu" id="logOut">خروج</a>
+          </div>
+
+          <div class="userMenu">
+            <a id="lockApp">إيقاف البرنامج</a>
+            <a id="changePassword">تغيير كلمة المرور</a>
+
+            <a href="favouriteScreens.html">الشاشات المفضلة</a>
+          </div>
+
+          <div class="settingsMenu">
+            <a id="theme">السمة</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="salesSubMenus salesWrapper" id="salesSubMenus">
+          <div class="salesMenu" id="salesMenu">
+            <a href="sellingInvoice.html">فاتوره بيع</a>
+            <a href="returnSale.html">مرتجع بيع</a>
+            <span class="line"></span>
+            <a href="openingBalances.html">الأرصدة الافتتاحية</a>
+            <a href="drawerDelivery.html">تسليم الدرج</a>
+            <span class="line"></span>
+            <a href="salesReports.html">تقارير المبيعات</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="inventorySubMenus inventoryWrapper" id="inventorySubMenus">
+          <div class="inventoryMenu" id="inventoryMenu">
+            <a href="addProduct.html">إضافة صنف</a>
+            <a href="products.html">إدارة الأصناف</a>
+            <a href="alternatives.html">البدائل</a>
+            <a href="units.html">الوحدات</a>
+            <a href="category.html">المجموعات</a>
+  
+            <a href="barcode.html">طباعة الباركود</a>
+            <a href="shortComingsSheet.html">كشكول النواقص</a>
+            <a href="inventory.html">المخزون</a>
+            <a href="inventoryReports.html">تقارير المخازن</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="purchasesSubMenus purchasesWrapper" id="purchasesSubMenus">
+          <div class="purchasesMenu" id="purchasesMenu">
+            <a href="purchaseInvoice.html">فاتوره شراء</a>
+            <a href="purchaseReports.html">تقارير المشتريات</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="clientsSubMenus clientsWrapper" id="clientsSubMenus">
+          <div class="clientsMenu" id="clientsMenu">
+            <a href="addCustomer.html">إضافة عميل</a>
+            <a href="customers.html">إدارة العملاء</a>
+            <a href="clientsReports.html">تقارير العملاء</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="suppliersSubMenus suppliersWrapper" id="suppliersSubMenus">
+          <div class="suppliersMenu" id="suppliersMenu">
+            <a href="addSupplier.html">إضافة مورد</a>
+            <a href="suppliers.html">إدارة الموردين</a>
+            <a href="suppliersReports.html">تقارير الموردين</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div
+          class="accountsAndFinanceSubMenus accountsAndFinanceWrapper"
+          id="accountsAndFinanceSubMenus"
+        >
+          <div class="accountsAndFinanceMenu" id="accountsAndFinanceMenu">
+            <a href="cashSupply.html">توريد النقدية</a>
+            <a href="cashOut.html">صرف النقدية</a>
+            <a href="financialReports.html">التقارير المالية</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div class="HRSubMenus HRWrapper" id="HRSubMenus">
+          <div class="HRMenu" id="HRMenu">
+            <a href="addEmployee.html">إضافة موظف</a>
+
+            <a href="employees.html">إدارة الموظفين</a>
+            <a href="employeeReports.html">تقارير الموظفين</a>
+          </div>
+        </div>
+
+        <!-- Sub menus -->
+        <div
+          class="technicalHelpSubMenus technicalHelpWrapper"
+          id="technicalHelpSubMenus"
+        >
+          <div class="technicalHelpMenu" id="technicalHelpMenu">
+            <a id="phoneCallLink">مكالمة هاتفية</a>
+            <a id="chatLink">محادثة فورية</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= MAIN CONTENT ================= -->
+      <div class="main">
+        <!-- Top Navigation Bar -->
+        <div class="topbar">
+          <div class="topLeft">
+            <div id="mobileSidebarToggle" class="sideBarIcon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Search Box -->
+            <div class="search">
+              <input type="text" placeholder="ابحث عن أى شئ تريده هنا..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <!-- Branch and Date Info -->
+          <div class="branchAndDate">
+            <div>الفرع : <span class="branch">المنيا</span></div>
+          </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="content">
+          <div class="page-title">العملاء</div>
+
+          <!-- Search Filters -->
+          <div class="search-box">
+            <div>
+              <label>بحث بالكود أو الاسم</label>
+              <input type="text" id="searchInput" />
+            </div>
+
+            <button class="btn-search" id="searchBtn">بحث</button>
+          </div>
+
+          <!-- Data Table -->
+          <div class="table-box">
+            <table id="clientsTable">
+              <thead>
+                <tr>
+                  <th>الكود</th>
+                  <th>الاسم</th>
+                  <th>رقم الهاتف</th>
+                  <th>الرصيد الإفتتاحي</th>
+                </tr>
+              </thead>
+
+              <tbody id="clientsTableBody"></tbody>
+            </table>
+          </div>
+
+          <!-- Footer Section -->
+          <div class="footer">
+            <div>عدد الصفوف : <span id="rowCount">0</span></div>
+
+            <div class="buttons">
+              <button class="btn add" id="addBtn">إضافة</button>
+              <button class="btn edit" id="editBtn">تعديل</button>
+              <button class="btn delete" id="deleteBtn">حذف</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popupPages">
+        <!-- Lock screen -->
+        <div id="lockScreen" class="lock-screen">
+          <div class="lock-box">
+            <h3>تم إيقاف البرنامج مؤقتًا، قم بتسجيل الدخول لفتحه</h3>
+
+            <div class="unlockInputs">
+              <div>
+                <label for="unlockUserName">اسم المستخدم</label>
+                <input
+                  type="text"
+                  id="unlockUserName"
+                  placeholder=" اسم المستخدم"
+                />
+              </div>
+
+              <div>
+                <label for="unlockPassword">كلمة المرور</label>
+                <input
+                  type="password"
+                  id="unlockPassword"
+                  placeholder=" كلمة المرور"
+                />
+              </div>
+            </div>
+
+            <button id="unlockButton">فتح البرنامج</button>
+          </div>
+        </div>
+
+        <!-- Change password -->
+        <div id="changePasswordScreen" class="changePasswordScreen">
+          <div class="changePasswordBox">
+            <i class="fa-solid fa-x" id="closeChangePasswordScreen"></i>
+
+            <h3>تغيير كلمة المرور</h3>
+
+            <div class="changePasswordInputs">
+              <div>
+                <label for="oldPassword">كلمة المرور القديمة</label>
+                <input
+                  type="password"
+                  id="oldPassword"
+                  placeholder=" كلمة المرور القديمة"
+                />
+              </div>
+
+              <div>
+                <label for="newPassword">كلمة المرور الجديدة</label>
+                <input
+                  type="password"
+                  id="newPassword"
+                  placeholder=" كلمة المرور الجديدة"
+                />
+              </div>
+
+              <div>
+                <label for="newPasswordConfirmation"
+                  >تأكيد كلمة المرور الجديدة</label
+                >
+                <input
+                  type="password"
+                  id="newPasswordConfirmation"
+                  placeholder=" تأكيد كلمة المرور الجديدة"
+                />
+              </div>
+            </div>
+
+            <button id="changePasswordButton">تغيير كلمة المرور</button>
+          </div>
+        </div>
+
+        <!-- Theme modal -->
+        <div class="theme-overlay" id="themeOverlay">
+          <div class="theme-modal" id="themeModal">
+            <div class="themeModalHeader">
+              <h2 class="themeModalTitle">إعدادات المظهر</h2>
+              <button class="theme-modal__close-btn" id="closeModalBtn">
+                &times;
+              </button>
+            </div>
+
+            <form class="theme-form" id="themeForm">
+              <div class="themeFormGroup">
+                <label for="themeSelect" class="themeFormLabel"
+                  >اختر الثيم</label
+                >
+                <select id="themeSelect" class="themeFormSelect">
+                  <option value="light">فاتح</option>
+                  <option value="dark">داكن</option>
+                  <option value="default">افتراضي</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="themeModalActions">
+              <button type="button" class="btn-save" id="saveSettingsBtn">
+                حفظ
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Favourite screens -->
+      <div class="favouriteScreens" id="favouriteScreens">
+        <p id="favouriteScreensHide" class="favouriteScreensHide">
+          إخفاء الشاشات المفضلة
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="../JS/master.js"></script>
+    <script src="../JS/customers.js"></script>
+  </body>
+</html>

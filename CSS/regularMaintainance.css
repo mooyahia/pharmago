@@ -1,0 +1,334 @@
+/* ================= RESET / BASE ================= */
+
+.content {
+  flex: 1;
+  padding: 24px;
+  margin-bottom: 80px;
+}
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* ================= TABLE ================= */
+
+.maintenance-table {
+  border: 2px solid #0f8b8d;
+  min-height: 350px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.maintenance-table__header,
+.maintenance-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.maintenance-table__header {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.maintenance-table__row {
+  margin-bottom: 10px;
+}
+
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+
+.status-stopped {
+  color: red;
+  font-weight: bold;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.actions-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #0f8b8d;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0c6f70;
+}
+
+.btn-danger {
+  background-color: #d62828;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #a61b1b;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.btn-add-operation {
+  background: #0f8b8d;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-add-operation:hover {
+  background: #0c6f70;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+.maintenance-modal {
+  width: 70%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* ================= MODAL HEADER ================= */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.modal-close {
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ================= FORM ================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.repeating {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-input,
+.form-select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #eef2f5;
+}
+
+/* ================= DELETE GROUP ================= */
+
+.delete-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.delete-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.delete-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.delete-controls {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.delete-input,
+.delete-select {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.delete-input:focus,
+.delete-select:focus {
+  border-color: #009099;
+  box-shadow: 0 0 0 2px rgba(0, 144, 153, 0.15);
+}
+
+.delete-input:disabled,
+.delete-select:disabled {
+  background: #f2f2f2;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ================= SAVE BUTTON ================= */
+
+.modal-actions {
+  margin-top: 30px;
+}
+
+.btn-save {
+  background: #0f8b8d;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.btn-save:hover {
+  background: #0c6f70;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .maintenance-modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .repeating {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .maintenance-table__header,
+  .maintenance-table__row {
+    font-size: 16px;
+  }
+
+  .actions-container {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .content {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .maintenance-table {
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .maintenance-table__header,
+  .maintenance-table__row {
+    min-width: 600px;
+    font-size: 14px;
+  }
+
+  .actions-container {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .maintenance-modal {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .repeating {
+    grid-template-columns: 1fr;
+  }
+
+  .delete-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .delete-controls {
+    flex-direction: column;
+  }
+}
