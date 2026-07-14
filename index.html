@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<!-- ================= META ================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول</title>
+
+<!-- ================= FONT AWESOME ================= -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="CSS/login.css">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Ep3g76Z_2zLEdjE3L",
+      });
+   })();
+</script>
+</head>
+
+
+<body>
+
+<!-- الشعار -->
+<div class="logo-wrap">
+  <div class="logo-icon">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="13" y="4" width="6" height="24" rx="3" fill="white" opacity=".9"/>
+      <rect x="4" y="13" width="24" height="6" rx="3" fill="white" opacity=".9"/>
+    </svg>
+  </div>
+  <div class="logo-title">فارما جو</div>
+  <div class="logo-sub" id="logoSub">تسجيل الدخول إلى حسابك</div>
+</div>
+
+<!-- البطاقة -->
+<div class="card">
+
+  <!-- ══════════ لوحة تسجيل الدخول ══════════ -->
+  <div class="panel active" id="panelLogin">
+    <div class="panel-head">
+      <h2>مرحباً بعودتك</h2>
+      <p>أدخل بياناتك للمتابعة</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="field" id="f-lu">
+        <label>اسم المستخدم <span>*</span></label>
+        <input type="text" id="lu" placeholder="أدخل اسم المستخدم" autocomplete="username"/>
+        <span class="err-msg">اسم المستخدم مطلوب</span>
+      </div>
+      <div class="field" id="f-lp">
+        <label>كلمة المرور <span>*</span></label>
+        <div class="inp-wrap">
+          <input type="password" id="lp" placeholder="أدخل كلمة المرور" autocomplete="current-password" style="padding-left:40px;padding-right:14px;"/>
+          <button class="eye-btn" type="button" onclick="togglePw('lp',this)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="err-msg">كلمة المرور مطلوبة</span>
+      </div>
+    </div>
+    <div class="forgot-row"><a onclick="show('panelForgot')">نسيت كلمة المرور؟</a></div>
+    <button class="btn-primary" onclick="doLogin()">تسجيل الدخول</button>
+    <div class="divider"></div>
+    <div class="switch-link">ليس لديك حساب؟ <a onclick="show('panelRegister')">سجّل هنا</a></div>
+  </div>
+
+  <!-- ══════════ لوحة إنشاء حساب ══════════ -->
+  <div class="panel" id="panelRegister">
+    <div class="panel-head">
+      <h2>إنشاء حساب جديد</h2>
+      <p>أدخل بياناتك للبدء</p>
+    </div>
+    <div class="form-grid">
+      <div class="field" id="f-rn">
+        <label>الاسم الكامل <span>*</span></label>
+        <input type="text" id="rn" placeholder="الاسم الكامل"/>
+        <span class="err-msg">الاسم مطلوب</span>
+      </div>
+      <div class="field" id="f-rph">
+        <label>اسم الصيدلية <span>*</span></label>
+        <input type="text" id="rph" placeholder="اسم الصيدلية"/>
+        <span class="err-msg">اسم الصيدلية مطلوب</span>
+      </div>
+      <div class="field" id="f-rphone">
+        <label>رقم الهاتف <span>*</span></label>
+        <input type="tel" id="rphone" placeholder="+20 1XX XXX XXXX" style="direction:ltr;text-align:right;"/>
+        <span class="err-msg">رقم هاتف صحيح مطلوب</span>
+      </div>
+      <div class="field" id="f-remail">
+        <label>البريد الإلكتروني <span>*</span></label>
+        <input type="email" id="remail" placeholder="you@email.com" style="direction:ltr;text-align:right;"/>
+        <span class="err-msg">بريد إلكتروني صحيح مطلوب</span>
+      </div>
+      <div class="field full" id="f-ru">
+        <label>اسم المستخدم <span>*</span></label>
+        <input type="text" id="ru" placeholder="اختر اسم مستخدم"/>
+        <span class="err-msg">اسم المستخدم مطلوب</span>
+      </div>
+      <div class="field" id="f-rp">
+        <label>كلمة المرور <span>*</span></label>
+        <div class="inp-wrap">
+          <input type="password" id="rp" placeholder="أنشئ كلمة مرور" style="padding-left:40px;padding-right:14px;"/>
+          <button class="eye-btn" type="button" onclick="togglePw('rp',this)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="err-msg">كلمة المرور مطلوبة</span>
+      </div>
+      <div class="field" id="f-rpc">
+        <label>تأكيد كلمة المرور <span>*</span></label>
+        <div class="inp-wrap">
+          <input type="password" id="rpc" placeholder="أعد إدخال كلمة المرور" style="padding-left:40px;padding-right:14px;"/>
+          <button class="eye-btn" type="button" onclick="togglePw('rpc',this)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="err-msg">كلمتا المرور غير متطابقتين</span>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="doRegister()">إنشاء الحساب</button>
+    <div class="divider"></div>
+    <div class="switch-link">لديك حساب بالفعل؟ <a onclick="show('panelLogin')">سجّل الدخول</a></div>
+  </div>
+
+  <!-- ══════════ لوحة التحقق OTP ══════════ -->
+  <div class="panel" id="panelOtp">
+    <span class="back-link" onclick="show('panelRegister')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      رجوع
+    </span>
+    <div class="panel-head">
+      <h2>تحقق من حسابك</h2>
+      <p>أرسلنا رمزاً من 6 أرقام إلى هاتفك وبريدك</p>
+    </div>
+    <p class="otp-note">أدخل الرمز المرسل إلى <strong id="otpTarget">+20 1XX XXX XXXX</strong></p>
+    <div class="otp-row" id="otpRow">
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+    </div>
+    <div class="resend-row">لم تستلم الرمز؟ <a onclick="resendOtp()">إعادة الإرسال</a></div>
+    <button class="btn-primary" onclick="verifyOtp('register')">تأكيد</button>
+  </div>
+
+  <!-- ══════════ لوحة نسيت كلمة المرور ══════════ -->
+  <div class="panel" id="panelForgot">
+    <span class="back-link" onclick="show('panelLogin')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      العودة لتسجيل الدخول
+    </span>
+    <div class="panel-head">
+      <h2>إعادة تعيين كلمة المرور</h2>
+      <p>أدخل الايميل الخاص بك لاستلام رمز التحقق</p>
+    </div>
+    <div class="field" id="f-fp">
+      <label>البريد الإلكتروني <span>*</span></label>
+      <input type="email" id="fp" placeholder="البريد الإلكتروني" style="direction:ltr;text-align:right;"/>
+      <span class="err-msg">بريد إلكتروني صحيح مطلوب</span>
+    </div>
+    <button class="btn-primary" onclick="sendForgotCode()">إرسال الرمز</button>
+  </div>
+
+  <!-- ══════════ لوحة OTP - نسيت كلمة المرور ══════════ -->
+  <div class="panel" id="panelForgotOtp">
+    <span class="back-link" onclick="show('panelForgot')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      رجوع
+    </span>
+    <div class="panel-head">
+      <h2>أدخل رمز التحقق</h2>
+      <p>تم إرسال رمز إلى هاتفك المسجّل</p>
+    </div>
+    <p class="otp-note">الرمز المرسل إلى <strong id="forgotOtpTarget">+20 1XX XXX XXXX</strong></p>
+    <div class="otp-row" id="forgotOtpRow">
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+      <input class="otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]"/>
+    </div>
+    <div class="resend-row">لم تستلم الرمز؟ <a onclick="resendForgotOtp()">إعادة الإرسال</a></div>
+    <button class="btn-primary" onclick="verifyOtp('forgot')">تأكيد</button>
+  </div>
+
+  <!-- ══════════ لوحة كلمة المرور الجديدة ══════════ -->
+  <div class="panel" id="panelNewPw">
+    <div class="panel-head">
+      <h2>تعيين كلمة مرور جديدة</h2>
+      <p>اختر كلمة مرور قوية لحسابك</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="field" id="f-np">
+        <label>كلمة المرور الجديدة <span>*</span></label>
+        <div class="inp-wrap">
+          <input type="password" id="np" placeholder="كلمة المرور الجديدة" style="padding-left:40px;padding-right:14px;"/>
+          <button class="eye-btn" type="button" onclick="togglePw('np',this)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="err-msg">كلمة المرور مطلوبة</span>
+      </div>
+      <div class="field" id="f-npc">
+        <label>تأكيد كلمة المرور الجديدة <span>*</span></label>
+        <div class="inp-wrap">
+          <input type="password" id="npc" placeholder="أعد إدخال كلمة المرور" style="padding-left:40px;padding-right:14px;"/>
+          <button class="eye-btn" type="button" onclick="togglePw('npc',this)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="err-msg">كلمتا المرور غير متطابقتين</span>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="setNewPassword()">إعادة تعيين كلمة المرور</button>
+  </div>
+
+  <!-- ══════════ لوحة النجاح ══════════ -->
+  <div class="panel" id="panelSuccess">
+    <div class="success-badge">
+      <div class="success-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 id="successTitle">تم إنشاء الحساب!</h3>
+      <p id="successMsg">تم التحقق من حسابك وإنشاؤه بنجاح.</p>
+    </div>
+    <button class="btn-primary" onclick="show('panelLogin')" style="margin-top:14px;">الذهاب لتسجيل الدخول</button>
+  </div>
+
+</div>
+
+<div class="page-footer">© 2026 فارما جو. جميع الحقوق محفوظة.</div>
+
+<!-- الإشعار -->
+<div class="toast" id="toast"></div>
+
+
+<script src="JS/login.js"></script>
+</body>
+</html>
